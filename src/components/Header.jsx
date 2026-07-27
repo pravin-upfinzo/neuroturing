@@ -17,9 +17,19 @@ const products = [
 const navItemBase =
   'flex h-9 min-w-[84px] items-center justify-center gap-1.5 rounded-full border-2 border-transparent px-4 text-sm font-medium transition-colors duration-200 whitespace-nowrap';
 
-const navItemActive =
-  'border-white bg-[linear-gradient(7deg,_#fff,_rgba(106,141,255,1),_#fff)] text-black shadow-[0_0_0_1px_#ddd]';
-
+const navItemActive = `
+  flex h-12 min-w-[90px] items-center justify-center
+  rounded-full
+  border border-white/70
+  bg-gradient-to-b
+  from-[#D8E7FF]
+  via-[#9FB8F6]
+  to-[#8CA8E8]
+  text-[#1C1C1C]
+  font-medium
+  shadow-[0_0_0_1px_rgba(255,255,255,0.25),0_0_18px_rgba(120,170,255,0.45)]
+  `;
+  
 const navItemInactive = 'text-gray-400 hover:text-white';
 
 const Header = () => {
