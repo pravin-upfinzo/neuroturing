@@ -1,0 +1,110 @@
+import React from 'react';
+import Header from '../../components/Header';
+import Footer from '../../components/Footer';
+import ProductHeroBanner from './components/ProductHeroBanner';
+import AboutProduct from './components/AboutProduct';
+import ProblemItSolves from './components/ProblemItSolves';
+import HowItWorks from './components/HowItWorks';
+import { Users, MessageSquare, Layers, FileText, Globe, CheckCircle2, Languages, Mic } from 'lucide-react';
+
+// ─── ExplainTouch Theme (Emerald / Green) ───────────────────────────────────
+const theme = {
+  gradientFrom: 'from-emerald-500',
+  gradientTo: 'to-teal-400',
+  glowColor: 'rgba(16,185,129,0.22)',
+  tagBorderColor: 'border-emerald-500/30',
+  tagTextColor: 'text-emerald-400',
+  tagBgColor: 'bg-emerald-500/10',
+  cardBorderColor: 'border-emerald-500/20',
+  iconBgColor: 'bg-emerald-900/40',
+  iconBorderColor: 'border-emerald-500/20',
+  accentTextColor: 'text-emerald-400',
+  stepBorderColor: 'border-emerald-500',
+  connectorColor: 'from-emerald-700 to-transparent',
+  badgeBorderColor: 'border-emerald-500/25',
+  badgeBgColor: 'bg-emerald-900/20',
+  badgeTextColor: 'text-emerald-400',
+};
+
+const badges = [
+  { icon: <Globe className="w-4 h-4" />,        label: '12+ Languages',    sub: 'Auto-localised' },
+  { icon: <CheckCircle2 className="w-4 h-4" />, label: 'GDPR Art. 22',    sub: 'Right to explain' },
+  { icon: <MessageSquare className="w-4 h-4" />,label: 'Any Channel',      sub: 'Email, SMS, API' },
+  { icon: <Mic className="w-4 h-4" />,           label: 'Plain Language',  sub: 'NLG-powered' },
+];
+
+const highlights = [
+  { value: '5×',   label: 'Customer Comprehension', description: 'Plain-language explanations tested against consumer focus groups.' },
+  { value: '—38%', label: 'Complaint Rate',          description: 'Institutions using ExplainTouch saw fewer credit-decision disputes.' },
+  { value: '12+',  label: 'Languages Supported',    description: 'Automatically localised explanations for global customer bases.' },
+  { value: '100%', label: 'Right-to-Explain Ready', description: 'GDPR Article 22 compliance out of the box.' },
+];
+
+const problems = [
+  {
+    icon: <Users className="w-6 h-6" />,
+    title: 'Unintelligible Decisions',
+    description: 'Customers receiving loan rejections or insurance denials are entitled to an explanation—but technical SHAP values mean nothing to them.',
+  },
+  {
+    icon: <MessageSquare className="w-6 h-6" />,
+    title: 'Complaint Overload',
+    description: 'Without clear explanations at point-of-decision, customers escalate—driving up call-centre costs and regulatory complaints.',
+  },
+  {
+    icon: <FileText className="w-6 h-6" />,
+    title: 'GDPR Right-to-Explain',
+    description: 'Article 22 mandates meaningful information about automated decisions. Most institutions cannot produce this consistently at scale.',
+  },
+];
+
+const steps = [
+  { step: '01', title: 'Ingest Model Decisions',    description: 'ExplainTouch hooks into your decisioning pipeline and receives each model output along with its ClarityCore explanation payload.' },
+  { step: '02', title: 'Translate to Plain Language', description: 'Our NLG engine converts feature weights and decision paths into clear, jargon-free sentences calibrated to your customer segments.' },
+  { step: '03', title: 'Personalise & Localise',     description: 'Apply tone, language, and channel-specific templates. Deliver via email, SMS, in-app, or contact-centre scripts.' },
+  { step: '04', title: 'Log & Audit',                description: 'Every explanation delivered to a customer is stored immutably with a timestamp and delivery receipt for regulatory evidence.' },
+];
+
+const ExplainTouch = () => (
+  <div className="relative w-full overflow-hidden bg-background text-white">
+    <div className="absolute top-0 left-0 w-full z-50"><Header /></div>
+
+    <ProductHeroBanner
+      tagline="Customer-Facing Explainability"
+      title="ExplainTouch"
+      subtitle="Human-readable AI decisions, delivered directly to your customers."
+      description="ExplainTouch converts complex model outputs into plain-language explanations personalised for every customer—at the moment of decision, in any language, across any channel."
+      badges={badges}
+      theme={theme}
+      ctaLabel="Get Started"
+      ctaSecondary="See a Live Example"
+    />
+
+    <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <AboutProduct
+        sectionTag="About ExplainTouch"
+        heading={<>Explainability that <span className="text-emerald-400">customers actually understand.</span></>}
+        body="ExplainTouch bridges the gap between technical model explanations and the people they affect. It takes the structured output from ClarityCore and transforms it into clear, compliant, personalised communications that build trust and reduce disputes."
+        highlights={highlights}
+        theme={theme}
+      />
+      <ProblemItSolves
+        sectionTag="The Problem"
+        heading={<>When AI decisions <span className="text-emerald-400">leave customers in the dark</span></>}
+        intro="Regulatory obligations and customer trust both demand that people understand why a decision was made about them. Most institutions have no scalable way to deliver this."
+        problems={problems}
+        theme={theme}
+      />
+      <HowItWorks
+        sectionTag="How It Works"
+        heading={<>From model output to <span className="text-emerald-400">customer-ready explanation.</span></>}
+        steps={steps}
+        theme={theme}
+        cta={{ label: 'View Integration Guide', href: '#' }}
+      />
+    </div>
+    <Footer />
+  </div>
+);
+
+export default ExplainTouch;

@@ -1,2 +1,2 @@
 # neuroturing
-Fintech Application
+Neuroturing- Fintech Application
