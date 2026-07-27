@@ -1,5 +1,5 @@
 import React from 'react';
-import { Sparkles, ChevronRight } from 'lucide-react';
+import { Sparkles } from 'lucide-react';
 import heroVideo from '../../../images/herobanner-img.mp4';
 
 const HeroSection = () => {
@@ -50,35 +50,98 @@ const HeroSection = () => {
         <div className="pointer-events-none absolute left-44 top-24 h-[300px] w-[300px] rounded-full bg-cyan-400/10 blur-[150px]" />
         <div className="flex min-h-screen items-center py-32">
           <div className="max-w-[650px]">
-            <h1 className="font-extrabold tracking-[-1.5px] leading-[1.08] text-4xl sm:text-5xl lg:text-[64px]">
-              <span className="text-[#BFEFFD]">Where </span>
-              <span className="bg-gradient-to-r from-[#6EA8FF] to-[#2B5FCB] bg-clip-text text-transparent">
+            <h1 className="text-[60px] font-extrabold leading-[70px] text-[#B4F1FF] [text-shadow:0_0_69.6px_rgba(21,93,214,0.80)]">
+              Where{" "}
+              <span className="text-[#357CCE]">
                 Financial AI
               </span>
               <br />
-              <span className="text-[#BFEFFD]">Becomes Explainable</span>
+              Becomes Explainable
             </h1>
-
-            <p className="mt-6 max-w-lg text-base sm:text-lg font-light leading-relaxed text-white/80">
+            <p className="mt-4 text-[17px] font-normal leading-normal text-white">
               The Explainable Intelligence Layer for Modern Finance, AI predicts. XAI justifies.
             </p>
 
             <div className="mt-10 flex flex-wrap items-center gap-4">
               {/* Book a Demo */}
-              <button className="group relative overflow-hidden rounded-full border border-sky-400/40 bg-[#14263D]/90 px-8 py-4 font-medium text-white shadow-[0_0_25px_rgba(56,189,248,0.35)] backdrop-blur-md transition-all duration-500 hover:-translate-y-1 hover:border-[#60A5FA] hover:shadow-[0_0_40px_rgba(59,130,246,0.5)]">
-                <span className="absolute inset-0 -translate-x-full bg-gradient-to-r from-[#2563EB] via-[#3B82F6] to-[#60A5FA] transition-transform duration-500 group-hover:translate-x-0" />
-                <span className="relative flex items-center gap-2.5">
-                  <Sparkles size={18} className="transition-transform duration-500 group-hover:rotate-180" />
+              <button
+                className="
+                  group
+                  relative
+                  flex
+                  h-[62px]
+                  w-[186px]
+                  items-center
+                  justify-center
+                  overflow-hidden
+                  rounded-[62px]
+                  border
+                  border-white/20
+                  bg-[#0A192F]
+                  shadow-[0_0_64px_rgba(21,93,214,.25)]
+                "
+              >
+              <span class="
+                    absolute
+                    left-1/2
+                    bottom-[-30px]
+                    h-[90px]
+                    w-[70px]
+                    -translate-x-1/2
+                    rounded-full
+                    bg-[radial-gradient(circle,#3FD1FF_68.5%,#266799_100%)]
+                    opacity-40
+                    blur-[36px]
+                    scale-75
+                    transition-all
+                    duration-500
+                    group-hover:scale-100
+                    group-hover:opacity-60
+                  "></span>
+                {/* Bottom to Top Glow */}
+                <div
+                  className="
+                    absolute
+                    left-1/2
+                    top-full
+                    h-[130px]
+                    w-[130px]
+                    -translate-x-1/2
+                    rounded-full
+
+                    bg-[radial-gradient(circle,#3FD1FF_0%,#266799_65%,transparent_100%)]
+
+                    opacity-40
+                    blur-[38px]
+
+                    transition-all
+                    duration-700
+                    ease-[cubic-bezier(.22,1,.36,1)]
+
+                    group-hover:top-1/2
+                    group-hover:-translate-y-1/2
+                  "
+                />
+
+                {/* Content */}
+                <span className="relative z-10 flex items-center gap-3">
+                  <Sparkles
+                    className="transition-transform duration-500 group-hover:rotate-180"
+                    size={18}
+                  />
                   Book a Demo
                 </span>
               </button>
-
               {/* Explore the Platform */}
-              <button className="group relative overflow-hidden rounded-full border border-white/10 bg-white/[0.03] px-8 py-4 font-medium text-slate-400 backdrop-blur-md transition-all duration-500 hover:-translate-y-1 hover:border-[#3B82F6]/60 hover:text-white hover:shadow-[0_0_30px_rgba(59,130,246,0.25)]">
-                <span className="absolute inset-0 origin-left scale-x-0 bg-[#0F172A] transition-transform duration-500 group-hover:scale-x-100" />
-                <span className="relative flex items-center gap-2">
-                  Explore the Platform
-                  <ChevronRight size={18} className="transition-transform duration-500 group-hover:translate-x-2" />
+              <button className="group relative flex h-[62px] items-center overflow-hidden rounded-full border border-[rgba(148,163,184,0.20)] border-white/20 px-7 backdrop-blur-md ">
+                <span className="flex items-center gap-3 transition-all duration-500 ease-[cubic-bezier(.22,1,.36,1)] group-hover:translate-x-3">
+                  <span className="text-[17px] font-light text-[#94A3B8]">
+                    Explore the Platform
+                  </span>
+                  <svg width="14" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg" className="transition-all duration-500 ease-[cubic-bezier(.22,1,.36,1)] group-hover:translate-x-8" >
+                   <path d="M4.15026 7.26912C4.52858 6.88081 4.52858 6.26177 4.15026 5.87346L0.283293 1.90436C-0.0957632 1.51529 -0.0949183 0.89478 0.285196 0.506747L0.487204 0.30053C0.879328 -0.0997634 1.5238 -0.0997635 1.91592 0.30053L7.37321 5.87151C7.75406 6.2603 7.75406 6.88228 7.37321 7.27107L1.91592 12.842C1.5238 13.2423 0.879328 13.2423 0.487204 12.842L0.285196 12.6358C-0.0949182 12.2478 -0.0957634 11.6273 0.283292 11.2382L4.15026 7.26912ZM11.6931 7.26912C12.0714 6.88081 12.0714 6.26177 11.6931 5.87346L7.82615 1.90436C7.44709 1.51529 7.44794 0.89478 7.82805 0.506747L8.03006 0.30053C8.42219 -0.0997633 9.06665 -0.0997635 9.45878 0.30053L14.9161 5.87151C15.2969 6.2603 15.2969 6.88228 14.9161 7.27107L9.45878 12.842C9.06665 13.2423 8.42219 13.2423 8.03006 12.842L7.82805 12.6358C7.44794 12.2478 7.44709 11.6273 7.82615 11.2382L11.6931 7.26912Z" fill="#94A3B8"/>
+                  </svg>
+                  {/* <ChevronsRight size={18} className="transition-all duration-500 ease-[cubic-bezier(.22,1,.36,1)] group-hover:translate-x-8" /> */}
                 </span>
               </button>
             </div>
