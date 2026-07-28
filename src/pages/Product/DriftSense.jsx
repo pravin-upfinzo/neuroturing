@@ -6,6 +6,11 @@ import AboutProduct from './components/AboutProduct';
 import ProblemItSolves from './components/ProblemItSolves';
 import HowItWorks from './components/HowItWorks';
 import { Activity, TrendingDown, GitMerge, Bell, Radio, Gauge, BarChart2, RefreshCw } from 'lucide-react';
+import UndetectedFraudPatternImg from '../../images/products/icons/undetected-fraud-pattern.svg'
+import ModelPerformanceDegradationOvertimeImg from '../../images/products/icons/model-performance-degradation-overtime.svg'
+import IncreaseFalsePositives from '../../images/products/icons/increase-false-positives.svg'
+import LackofRealTimeMonitoring from '../../images/products/icons/lackof-real-time-monitoring.svg'
+
 import driftSenseAboutImg from '../../images/Aboutproduct/DriftSense_Aboutproduct.png';
 import ProductBannerImage from '../../images/Producetbanner/DriftSense.png';
 // ─── DriftSense Theme (Cyan / Teal) ─────────────────────────────────────────
@@ -66,6 +71,43 @@ const steps = [
   { step: '04', title: 'Trigger Remediation Workflows', description: 'Automatically initiate retraining pipelines, shadow model deployments, or model rollbacks—all with a full audit log captured by ProofChain.' },
 ];
 
+
+const problemSolvedData = {
+  title: "Problem It Solves",
+  badge: "Core Challenges",
+  description:
+    "Streamline your compliance process to turn high-effort audits into a seamless, automated advantage.",
+
+  iconBackground:
+    "from-[#FF4C00] to-[#992E00] shadow-[0_8px_20px_-6px_rgba(255,76,0,0.45)]",
+
+  borderStyle:
+  "bg-[linear-gradient(180deg,rgba(184,77,31,0)_0%,#B84D1F_47.12%,rgba(184,77,31,0)_100%)]",
+
+  details: [
+    {
+      id: 1,
+      icon: UndetectedFraudPatternImg,
+      description: "Undetected fraud patterns and anomalies",
+    },
+    {
+      id: 2,
+      icon: ModelPerformanceDegradationOvertimeImg,
+      description: "Model performance degradation over time",
+    },
+    {
+      id: 3,
+      icon: IncreaseFalsePositives,
+      description: "Increasing false positives or missed risks",
+    },
+    {
+      id: 4,
+      icon: LackofRealTimeMonitoring,
+      description: "Lack of real-time monitoring",
+    },
+  ],
+};
+
 const DriftSense = () => (
   <div className="relative w-full overflow-hidden bg-background text-white">
     <div className="absolute top-0 left-0 w-full z-50"><Header /></div>
@@ -87,12 +129,11 @@ const DriftSense = () => (
         ]}
         image={driftSenseAboutImg}
       />
-      <ProblemItSolves 
-        sectionTag="The Problem"
-        heading={<>Why models <span className="text-cyan-400">drift into failure</span></>}
-        intro="The world changes. Your training data does not. Every model deployed today is degrading—the question is whether you will know before or after a failure occurs."
-        problems={problems}
-        theme={theme}
+     
+
+      
+      <ProblemItSolves
+        data={problemSolvedData}
       />
       <HowItWorks
         sectionTag="How It Works"

@@ -6,6 +6,10 @@ import AboutProduct from './components/AboutProduct';
 import ProblemItSolves from './components/ProblemItSolves';
 import HowItWorks from './components/HowItWorks';
 import { Lock, Link2, ShieldAlert, Database, Hash, FileCheck2, GitCommit, Timer } from 'lucide-react';
+import incompleteAuditTrailsImg from '../../images/products/icons/incomplete-audit-trails.svg'
+import InabilityToReconstructAIdecisionsImg from '../../images/products/icons/inability-to-reconstruct-ai-decisions.svg'
+import HighManualEffortImg from '../../images/products/icons/high-manual-effort.svg'
+import RegulatoryImg from '../../images/products/icons/regulatory.svg'
 import proofChainAboutImg from '../../images/Aboutproduct/ProofChain_Aboutproduct.png';
 import ProductBannerImage from '../../images/Producetbanner/ProofChain.png';
 
@@ -67,6 +71,42 @@ const steps = [
   { step: '04', title: 'Respond to Challenges Instantly', description: 'Retrieve the full provenance of any decision—model version, input data, explanation, and downstream outcome—with a single API call.' },
 ];
 
+const problemSolvedData = {
+  title: "Problem It Solves",
+  badge: "Core Challenges",
+  description:
+    "Streamline your compliance process to turn high-effort audits into a seamless, automated advantage.",
+
+  iconBackground:
+    "from-[#8483F9] to-[#2525EA] shadow-[0_8px_20px_-6px_rgba(132,131,249,0.45)]",
+
+  borderStyle:
+  "bg-[linear-gradient(180deg,rgba(76,63,122,0)_0%,#4C3F7A_47.12%,rgba(76,63,122,0)_100%)]",
+
+  details: [
+    {
+      id: 1,
+      icon: incompleteAuditTrailsImg,
+      description: "Missing or incomplete audit trails",
+    },
+    {
+      id: 2,
+      icon: InabilityToReconstructAIdecisionsImg,
+      description: "Inability to reconstruct AI decisions",
+    },
+    {
+      id: 3,
+      icon: HighManualEffortImg,
+      description: "High manual effort during audits",
+    },
+    {
+      id: 4,
+      icon: RegulatoryImg,
+      description: "Regulatory and compliance risks",
+    },
+  ],
+};
+
 const ProofChain = () => (
   <div className="relative w-full overflow-hidden bg-background text-white">
     <div className="absolute top-0 left-0 w-full z-50"><Header /></div>
@@ -88,12 +128,10 @@ const ProofChain = () => (
         ]}
         image={proofChainAboutImg}
       />
+     
+
       <ProblemItSolves
-        sectionTag="The Problem"
-        heading={<>Why AI audit trails <span className="text-orange-400">fail under scrutiny</span></>}
-        intro="When regulators investigate an AI-driven decision, institutions routinely discover they cannot reconstruct the full decision context. ProofChain makes this impossible."
-        problems={problems}
-        theme={theme}
+        data={problemSolvedData}
       />
       <HowItWorks
         sectionTag="How It Works"

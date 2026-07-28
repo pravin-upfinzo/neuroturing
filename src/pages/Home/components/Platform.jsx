@@ -1,4 +1,5 @@
-import React, {useCallback} from 'react';
+import React, { useCallback } from 'react';
+import { Link } from 'react-router-dom';
 import Explainer from '../../../images/platform/Explainer.png';
 import Audit from '../../../images/platform/Audit.png';
 import Defence from '../../../images/platform/Defence.png';
@@ -11,27 +12,34 @@ const CAPABILITIES = [
     icon: Explainer,
     tag: 'Explainer',
     name: 'ClarityCore™',
-    description: 'Transform complex AI predictions into simple, human-readable explanations that everyone can understand.',
+    path: '/products/clarity-core',
+    description:
+      'Transform complex AI predictions into simple, human-readable explanations that everyone can understand.',
   },
   {
     variant: 'audit',
     icon: Audit,
     tag: 'Audit',
     name: 'ProofChain™',
-    description: 'Create immutable audit logs that satisfy regulatory and internal governance requirements.',
+    path: '/products/proof-chain',
+    description:
+      'Create immutable audit logs that satisfy regulatory and internal governance requirements.',
   },
   {
     variant: 'defence',
     icon: Defence,
     tag: 'Defence',
     name: 'DriftSense™',
-    description: 'Monitor model drift, fairness, bias, and anomalies continuously across production AI systems.',
+    path: '/products/drift-sense',
+    description:
+      'Monitor model drift, fairness, bias, and anomalies continuously across production AI systems.',
   },
   {
     variant: 'compliance',
     icon: Compliance,
     tag: 'Compliance',
     name: 'ExplainTouch™',
+    path: '/products/explain-touch',
     description:
       'Deliver transparent, customer-friendly explanations that improve trust and reduce disputes.',
     wide: true,
@@ -41,53 +49,55 @@ const CAPABILITIES = [
     icon: Scoring,
     tag: 'Scoring',
     name: 'InsightHub™',
-    description: 'Gain executive visibility through AI governance dashboards, compliance metrics, and operational intelligence.',
+    path: '/products/insight-hub',
+    description:
+      'Gain executive visibility through AI governance dashboards, compliance metrics, and operational intelligence.',
   },
 ];
 
 const variantStyles = {
   explainer: {
-    accent: "#002776",
-    bg: "linear-gradient(180deg,#1B3D7A 0%,#17356C 25%,#122A56 55%,#0D1F42 100%)",
-    glow: "rgba(91,157,251,.22)",
+    accent: '#002776',
+    bg: 'linear-gradient(180deg,#1B3D7A 0%,#17356C 25%,#122A56 55%,#0D1F42 100%)',
+    glow: 'rgba(91,157,251,.22)',
     gradient:
-      "conic-gradient(from 90deg,#3b82f6,#dbeafe,#ffffff,#dbeafe,#3b82f6,#dbeafe,#ffffff,#dbeafe,#3b82f6)",
+      'conic-gradient(from 90deg,#3b82f6,#dbeafe,#ffffff,#dbeafe,#3b82f6,#dbeafe,#ffffff,#dbeafe,#3b82f6)',
   },
 
   audit: {
-    accent: "#3B3AB5",
-    bg: "linear-gradient(180deg,#654FCF 0%,#5743BC 25%,#47359D 55%,#352777 100%)",
-    glow: "rgba(143,124,246,.22)",
+    accent: '#3B3AB5',
+    bg: 'linear-gradient(180deg,#654FCF 0%,#5743BC 25%,#47359D 55%,#352777 100%)',
+    glow: 'rgba(143,124,246,.22)',
     gradient:
-      "conic-gradient(from 90deg,#8f7cf6,#ede9fe,#ffffff,#ede9fe,#8f7cf6,#ede9fe,#ffffff,#ede9fe,#8f7cf6)",
+      'conic-gradient(from 90deg,#8f7cf6,#ede9fe,#ffffff,#ede9fe,#8f7cf6,#ede9fe,#ffffff,#ede9fe,#8f7cf6)',
   },
 
   defence: {
-    accent: "#FF5812",
-    bg: "linear-gradient(180deg,#C95D31 0%,#B65229 25%,#994320 55%,#753117 100%)",
-    glow: "rgba(240,120,74,.22)",
+    accent: '#FF5812',
+    bg: 'linear-gradient(180deg,#C95D31 0%,#B65229 25%,#994320 55%,#753117 100%)',
+    glow: 'rgba(240,120,74,.22)',
     gradient:
-      "conic-gradient(from 90deg,#f0784a,#ffe3d7,#ffffff,#ffe3d7,#f0784a,#ffe3d7,#ffffff,#ffe3d7,#f0784a)",
+      'conic-gradient(from 90deg,#f0784a,#ffe3d7,#ffffff,#ffe3d7,#f0784a,#ffe3d7,#ffffff,#ffe3d7,#f0784a)',
   },
 
   compliance: {
-    accent: "#0D5E3F",
-    bg: "linear-gradient(180deg,#2F966D 0%,#277E5C 25%,#20684B 55%,#174D38 100%)",
-    glow: "rgba(63,174,130,.22)",
+    accent: '#0D5E3F',
+    bg: 'linear-gradient(180deg,#2F966D 0%,#277E5C 25%,#20684B 55%,#174D38 100%)',
+    glow: 'rgba(63,174,130,.22)',
     gradient:
-      "conic-gradient(from 90deg,#3fae82,#d7f5e8,#ffffff,#d7f5e8,#3fae82,#d7f5e8,#ffffff,#d7f5e8,#3fae82)",
+      'conic-gradient(from 90deg,#3fae82,#d7f5e8,#ffffff,#d7f5e8,#3fae82,#d7f5e8,#ffffff,#d7f5e8,#3fae82)',
   },
 
   scoring: {
-    accent: "#E0855E",
-    bg: "linear-gradient(180deg,#B77552 0%,#9F6243 25%,#834F35 55%,#643A27 100%)",
-    glow: "rgba(231,165,130,.22)",
+    accent: '#E0855E',
+    bg: 'linear-gradient(180deg,#B77552 0%,#9F6243 25%,#834F35 55%,#643A27 100%)',
+    glow: 'rgba(231,165,130,.22)',
     gradient:
-      "conic-gradient(from 90deg,#e7a582,#fde9dd,#ffffff,#fde9dd,#e7a582,#fde9dd,#ffffff,#fde9dd,#e7a582)",
+      'conic-gradient(from 90deg,#e7a582,#fde9dd,#ffffff,#fde9dd,#e7a582,#fde9dd,#ffffff,#fde9dd,#e7a582)',
   },
 };
 
-function CapabilityCard({icon, tag, name, description, variant, wide}) {
+function CapabilityCard({ icon, tag, name, description, variant, wide, path }) {
   const colors = variantStyles[variant];
 
   const handleMouseMove = useCallback((e) => {
@@ -139,7 +149,10 @@ function CapabilityCard({icon, tag, name, description, variant, wide}) {
           >
             {/* Inner Circle */}
             <div className="flex h-full w-full items-center justify-center rounded-full bg-[#080d1c]">
-              <img src={icon} alt="" />
+              <img
+                src={icon}
+                alt=""
+              />
             </div>
           </div>
         </div>
@@ -173,15 +186,15 @@ function CapabilityCard({icon, tag, name, description, variant, wide}) {
 
       {/* Footer */}
       <div className="relative z-10 flex items-center justify-between">
-        <a
-          href="#"
-          className="flex items-center gap-2 text-sm text-[#8F5DE4] font-medium"
+        <Link
+          to={path}
+          className="group flex items-center gap-2 text-sm font-medium text-[#8F5DE4]"
         >
           Explore product
-          <span className="transition-transform group-hover:translate-x-1">
+          <span className="transition-transform duration-300 group-hover:translate-x-1">
             →
           </span>
-        </a>
+        </Link>
 
         <span
           className="h-1 w-11 rounded-full"
@@ -217,8 +230,8 @@ export default function PlatformCapabilities() {
         </h2>
         {/* Description */}
         <p className="mt-5 mb-14 text-lg leading-8 text-white">
-          Each Neuroturing XAI module works independently or together
-          forming a complete explainability and governance layer.
+          Each Neuroturing XAI module works independently or together forming a
+          complete explainability and governance layer.
         </p>
 
         {/* Grid */}

@@ -1,10 +1,8 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { Bot, Twitter, Linkedin, Github, Facebook, Instagram, ArrowRight } from 'lucide-react';
-import logo from '../images/logo.svg';
+import { Twitter, Linkedin, Facebook, Instagram, ArrowRight, ArrowUp } from 'lucide-react';
 import footerlogo from '../images/footer-logo.png';
-
-
+import TrustOperatingSystem from '../pages/Home/components/TrustOperatingSystem';
 
 const FOOTER_COLUMNS = [
   {
@@ -30,6 +28,15 @@ const LINK_ROUTES = {
   Home: '/',
   'About Us': '/company',
   'Contact Us': '/contact',
+  'ClarityCore™': '/products/clarity-core',
+  'ProofChain™': '/products/proof-chain',
+  'DriftSense™': '/products/drift-sense',
+  'ExplainTouch™': '/products/explain-touch',
+  'InsightHub™': '/products/insight-hub',
+  "FAQ's": '/faq',
+  'Terms & Conditions': '/terms-and-conditions',
+  'Privacy Policy': '/privacy-policy',
+  'Cookie Policy': '/cookie-policy',
 };
 
 const SOCIALS = [
@@ -39,10 +46,55 @@ const SOCIALS = [
   { icon: Linkedin, label: 'LinkedIn' },
 ];
 
+const socialStyles = {
+  base: `
+    relative flex h-9 w-9 items-center justify-center rounded-full
+    bg-[#1A1A1A]
+    transition-all duration-300
+    hover:bg-[#242424]
+    shadow-[inset_0_3px_2px_rgba(255,255,255,0.08),0_0_10px_rgba(255,255,255,0.04)]
+  `,
+  border: `
+    before:absolute
+    before:inset-0
+    before:rounded-full
+    before:p-[1px]
+    before:pointer-events-none
+    before:content-['']
+    before:[-webkit-mask:linear-gradient(#fff_0_0)_content-box,linear-gradient(#fff_0_0)]
+    before:[-webkit-mask-composite:xor]
+    before:[mask-composite:exclude]
+  `,
+  gradient: `
+    before:bg-[conic-gradient(from_102.21deg_at_52.75%_38.75%,rgba(249,249,249,0.5)_-32.95deg,rgba(64,64,64,0.5)_10.52deg,rgba(64,64,64,0.35)_32.12deg,rgba(255,255,255,0.5)_60.28deg,rgba(255,255,255,0.5)_107.79deg,rgba(64,64,64,0.35)_187.59deg,#F9F9F9_207.58deg,rgba(255,255,255,0.5)_287.31deg,rgba(249,249,249,0.5)_327.05deg,rgba(64,64,64,0.5)_370.52deg)]
+  `,
+};
+
 const Footer = () => {
   const [email, setEmail] = useState('');
 
+  const [showScrollTop, setShowScrollTop] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setShowScrollTop(window.scrollY > 300);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  };
+
   return (
+    <>
+    <TrustOperatingSystem/>
     <footer className="w-full bg-[#05070d] pt-16 relative z-20">
       <div className="w-full flex flex-col md:flex-row justify-between gap-20 lg:gap-44 max-w-7xl mx-auto px-6 lg:px-10 pb-10">
         {/* Brand column */}
@@ -83,22 +135,12 @@ const Footer = () => {
             </form>
 
             {/* Social icons */}
-            <div className="mt-8 flex items-center gap-4">
+            <div className="mt-2 flex items-center gap-4">
               {SOCIALS.map(({ icon: Icon, label }) => (
                 <button
                   key={label}
                   aria-label={label}
-                  className="h-9 w-9 rounded-full border border-white/15 bg-[#1A1A1A]
-        shadow-[inset_0_3px_2px_rgba(255,255,255,1),0_0_10px_rgba(255,255,255,0.04)]
-        flex
-        items-center
-        justify-center
-        transition-all
-        duration-300
-        hover:bg-[#242424]
-        hover:border-white/25
-      "
-                >
+                  className={`${socialStyles.base} ${socialStyles.border} ${socialStyles.gradient}`}>
                   <Icon className="h-4 w-4 text-white" />
                 </button>
               ))}
@@ -124,7 +166,7 @@ const Footer = () => {
                   ) : (
                     <a
                       key={link}
-                      href="#"
+                      href="javascript:void(0)"
                       className="text-textMuted hover:text-blue-400 text-sm transition-colors"
                     >
                       {link}
@@ -151,13 +193,58 @@ const Footer = () => {
           </div>
 
           <div className="flex items-center gap-6 order-2 md:order-none">
-            <a href="#" className="text-white/40 hover:text-white text-xs transition-colors">Privacy</a>
-            <a href="#" className="text-white/40 hover:text-white text-xs transition-colors">Terms</a>
-            <a href="#" className="text-white/40 hover:text-white text-xs transition-colors">Trust</a>
+            <a href="/privacy-policy" className="text-white/40 hover:text-white text-xs transition-colors">Privacy</a>
+            <a href="/terms-and-conditions)" className="text-white/40 hover:text-white text-xs transition-colors">Terms</a>
+            <a href="/cookie-policy" className="text-white/40 hover:text-white text-xs transition-colors">Cookies</a>
           </div>
         </div>
       </div>
+      {/* Scroll To Top */}
+      <button onClick={scrollToTop}
+        className={`
+          fixed
+          bottom-8
+          right-8
+          z-50
+          flex
+          h-14
+          w-14
+          items-center
+          justify-center
+          rounded-full
+          border
+          border-[#3FD1FF]/20
+          bg-[#0A192F]
+          text-white
+          backdrop-blur-md
+          shadow-[0_0_30px_rgba(21,93,214,0.35)]
+          transition-all
+          duration-500
+          hover:-translate-y-1
+          hover:scale-110
+          hover:border-[#3FD1FF]
+          hover:shadow-[0_0_45px_rgba(63,209,255,0.45)]
+          ${
+            showScrollTop
+              ? "translate-y-0 opacity-100"
+              : "pointer-events-none translate-y-6 opacity-0"
+          }
+        `}
+        >
+        <span className="
+            absolute
+            inset-0
+            rounded-full
+            bg-[radial-gradient(circle,#3FD1FF_0%,transparent_70%)]
+            opacity-20
+            blur-xl
+          "
+        />
+
+        <ArrowUp size={22} className="relative z-10 transition-transform duration-300 group-hover:-translate-y-1" />
+      </button>
     </footer>
+    </>
   );
 };
 

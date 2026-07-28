@@ -3,9 +3,14 @@ import Header from '../../components/Header';
 import Footer from '../../components/Footer';
 import ProductHeroBanner from './components/ProductHeroBanner';
 import AboutProduct from './components/AboutProduct';
-import ProblemItSolves from './components/ProblemItSolves';
 import HowItWorks from './components/HowItWorks';
-import { AlertTriangle, BarChart3, ShieldOff, Eye, GitBranch, Zap, Activity } from 'lucide-react';
+import { AlertTriangle, BarChart3, ShieldOff, Eye, GitBranch, Zap, Activity, EyeOff, Database } from 'lucide-react';
+import clarityCoreImg from '../../images/ClarityCore.png';
+import DatasetsImg from '../../images/products/icons/database.svg'
+import DelayinInvestigationsImg from '../../images/products/icons/delay-in-investigations.svg'
+import InabilityToJustifyDecisionsImg from '../../images/products/icons/inability-to-justify-decisions.svg'
+import LackOfVisibilityImg from '../../images/products/icons/lackof-visibility.svg'
+import ProblemItSolves from './components/ProblemItSolves';
 import clarityCoreAboutImg from '../../images/Aboutproduct/Claritycore_Aboutproduct.png';
 import ProductBannerImage from '../../images/Producetbanner/claritycore.png';
 // ─── ClarityCore Theme (Blue) ────────────────────────────────────────────────
@@ -60,6 +65,7 @@ const problems = [
   },
 ];
 
+
 const steps = [
   {
     step: '01',
@@ -82,6 +88,42 @@ const steps = [
     description: 'Dashboards surface explanation drift, flag anomalous decisions, and auto-escalate to human review when confidence drops below your configured threshold.',
   },
 ];
+
+const problemSolvedData = {
+  title: "Problem It Solves",
+  badge: "Core Challenges",
+  description:
+    "ClarityCore captures AI model outputs in real time and decodes the underlying logic by analyzing contributing variables, rules, and patterns. It then converts this information into clear, contextual explanations tailored for operational and compliance workflows.",
+
+  iconBackground:
+    "from-[#397CFF] to-[#1360DA] shadow-[0_8px_20px_-6px_rgba(57,124,255,0.45)]",
+
+borderStyle:
+    "bg-[linear-gradient(180deg,rgba(9,28,116,0)_0%,#2C73F2_47.12%,rgba(9,28,116,0)_100%)]",
+
+  details: [
+    {
+      id: 1,
+      icon: LackOfVisibilityImg,
+      description: "Lack of visibility into AI decision-making",
+    },
+    {
+      id: 2,
+      icon: DatasetsImg,
+      description: "High reliance on data science teams",
+    },
+    {
+      id: 3,
+      icon: DelayinInvestigationsImg,
+      description: "Delays in investigations and dispute resolution",
+    },
+    {
+      id: 4,
+      icon: InabilityToJustifyDecisionsImg,
+      description: "Inability to justify decisions internally or externally",
+    },
+  ],
+};
 
 const ClarityCore = () => {
   return (
@@ -108,14 +150,10 @@ const ClarityCore = () => {
           image={clarityCoreAboutImg}
         />
 
-        <ProblemItSolves
-          sectionTag="The Problem"
-          heading={<>Why black-box AI is a <span className="text-blue-400">liability</span></>}
-          intro="Financial institutions face mounting pressure to justify every automated decision. Without native explainability, every model is a legal and regulatory risk."
-          problems={problems}
-          theme={theme}
-        />
 
+        <ProblemItSolves
+          data={problemSolvedData}
+        />
         <HowItWorks
           sectionTag="How It Works"
           heading={<>From black-box to <span className="text-blue-400">glass-box</span> in four steps.</>}

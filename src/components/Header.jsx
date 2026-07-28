@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { ChevronDown } from 'lucide-react';
 import logo from '../images/logo.svg';
+import { ArrowRight } from "lucide-react";
+
 
 const products = [
   { name: 'ClarityCore', path: '/products/clarity-core', color: 'text-blue-400', dot: 'bg-blue-400' },
@@ -45,11 +47,6 @@ const Header = () => {
       <Link to="/" className="flex items-center">
         <img src={logo} alt="Neuroturing Logo" className="h-8" />
       </Link>
-
-      {/* Desktop nav — thin gradient-ring border (light top, fading to a soft
-          blue at the bottom) wrapped around the pill, since glass-panel alone
-          doesn't render a visible border. Same p-[1px] ring technique used
-          on the Contact Us button, so both elements match. */}
       <div className="hidden md:inline-flex rounded-[40px] bg-gradient-to-b from-white/25 via-white/5 to-blue-500/25 p-[1px]">
     <nav className="flex h-[50px] items-center gap-2 rounded-[40px] border border-white/10 bg-[#0B1320] px-2 py-2 transition-all duration-300 hover:border-blue-500">
         <Link
@@ -101,7 +98,8 @@ const Header = () => {
           to="/contact"
           className="flex items-center gap-2 rounded-full bg-black px-5 py-2 text-sm font-medium text-white transition-all duration-300 hover:bg-[#0a0a0a]"
         >
-          Contact Us
+          Contact Us  <ArrowRight className="w-5" />
+
         </Link>
       </div>
 

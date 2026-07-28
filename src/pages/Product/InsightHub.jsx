@@ -6,6 +6,10 @@ import AboutProduct from './components/AboutProduct';
 import ProblemItSolves from './components/ProblemItSolves';
 import HowItWorks from './components/HowItWorks';
 import { PieChart, TrendingDown, Search, Bell, BarChart2, ShieldCheck, Layers, Activity } from 'lucide-react';
+import LackOfActionImg from '../../images/products/icons/lackof-action-insights.svg'
+import DifficultyIdentifyingTrends from '../../images/products/icons/difficulty-identifying-trends.svg'
+import LimitedDecisionIntelligenceImg from '../../images/products/icons/limited-decision-intelligence.svg'
+import LackOfVisibilityImg from '../../images/products/icons/lackof-visibility.svg'
 import insightHubAboutImg from '../../images/Aboutproduct/InsightHub_Aboutproduct.png';
 import ProductBannerImage from '../../images/Producetbanner/InsightHub.png';
 
@@ -67,6 +71,42 @@ const steps = [
   { step: '04', title: 'Act & Document', description: 'Trigger automated remediation workflows or escalate to human review—with a full audit trail generated automatically.' },
 ];
 
+const problemSolvedData = {
+  title: "Problem It Solves",
+  badge: "Core Challenges",
+  description:
+    "InsightHub aggregates data from across the platform and presents it through intuitive dashboards, visualizations, and analytics—enabling users to explore trends, risks, and performance metrics in real time.",
+
+  iconBackground:
+    "from-[#EAA68D] to-[#9E6350] shadow-[0_8px_20px_-6px_rgba(234,166,141,0.45)]",
+
+  borderStyle:
+  "bg-[linear-gradient(180deg,rgba(217,126,94,0)_0%,#D97E5E_47.12%,rgba(217,126,94,0)_100%)]",
+
+  details: [
+    {
+      id: 1,
+      icon: LackOfVisibilityImg,
+      description: "Fragmented visibility across systems",
+    },
+    {
+      id: 2,
+      icon: LackOfActionImg,
+      description: "Lack of actionable insights from AI decisions",
+    },
+    {
+      id: 3,
+      icon: DifficultyIdentifyingTrends,
+      description: "Difficulty identifying trends and bottlenecks",
+    },
+    {
+      id: 4,
+      icon: LimitedDecisionIntelligenceImg,
+      description: "Limited decision intelligence for leadership",
+    },
+  ],
+};
+
 const InsightHub = () => (
   <div className="relative w-full overflow-hidden bg-background text-white">
     <div className="absolute top-0 left-0 w-full z-50"><Header /></div>
@@ -89,12 +129,10 @@ const InsightHub = () => (
 
         image={insightHubAboutImg}
       />
+    
+
       <ProblemItSolves
-        sectionTag="The Problem"
-        heading={<>Why AI governance <span className="text-pink-400">breaks down</span></>}
-        intro="As model portfolios grow, governance collapses into spreadsheets and tribal knowledge. The result: silent failures, regulatory exposure, and eroded trust."
-        problems={problems}
-        theme={theme}
+        data={problemSolvedData}
       />
       <HowItWorks
         small="sas"

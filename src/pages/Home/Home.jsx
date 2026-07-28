@@ -30,7 +30,6 @@ const Home = () => {
           <Platform />
           <HowNeuroturingWorks />
           <MeasurableImpact />
-          <TrustOperatingSystem />
         </main>
         <Footer />
       </div>

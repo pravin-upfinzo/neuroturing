@@ -6,6 +6,10 @@ import AboutProduct from './components/AboutProduct';
 import ProblemItSolves from './components/ProblemItSolves';
 import HowItWorks from './components/HowItWorks';
 import { Users, MessageSquare, Layers, FileText, Globe, CheckCircle2, Languages, Mic } from 'lucide-react';
+import HighvolumeOfSupportQqueriesImg from '../../images/products/icons/high-volume-of-support-queries.svg'
+import CustomerDistractAIdrivenOutcomes from '../../images/products/icons/customer-distract-AI-driven-outcomes.svg'
+import InabilityToJustifyDecisionsImg from '../../images/products/icons/inability-to-justify-decisions.svg'
+import LackOfVisibilityImg from '../../images/products/icons/lackof-visibility.svg'
 import explainTouchAboutImg from '../../images/Aboutproduct/ExplainTouch_Aboutproduct.png';
 
 import ProductBannerImage from '../../images/Producetbanner/ExplainTouch.png';
@@ -67,6 +71,43 @@ const steps = [
   { step: '04', title: 'Log & Audit', description: 'Every explanation delivered to a customer is stored immutably with a timestamp and delivery receipt for regulatory evidence.' },
 ];
 
+
+const problemSolvedData = {
+  title: "Problem It Solves",
+  badge: "Core Challenges",
+  description:
+    "Neutralize frustration during service disruptions with clear, honest communication that protects your brand’s reputation",
+
+  iconBackground:
+    "from-[#03C379] to-[#015D3A] shadow-[0_8px_20px_-6px_rgba(3,195,121,0.45)]",
+
+  borderStyle:
+  "bg-[linear-gradient(180deg,rgba(65,133,99,0)_0%,#418563_47.12%,rgba(65,133,99,0)_100%)]",
+
+  details: [
+    {
+      id: 1,
+      icon: LackOfVisibilityImg,
+      description: "Poor transparency in customer-facing decisions",
+    },
+    {
+      id: 2,
+      icon: HighvolumeOfSupportQqueriesImg,
+      description: "High volume of support queries",
+    },
+    {
+      id: 3,
+      icon: CustomerDistractAIdrivenOutcomes,
+      description: "Customer distrust in AI-driven outcomes",
+    },
+    {
+      id: 4,
+      icon: InabilityToJustifyDecisionsImg,
+      description: "Lack of clear communication during delays or failures",
+    },
+  ],
+};
+
 const ExplainTouch = () => (
   <div className="relative w-full overflow-hidden bg-background text-white">
     <div className="absolute top-0 left-0 w-full z-50"><Header /></div>
@@ -88,13 +129,11 @@ const ExplainTouch = () => (
           ]}
         image={explainTouchAboutImg}
       />
+     
       <ProblemItSolves
-        sectionTag="The Problem"
-        heading={<>When AI decisions <span className="text-emerald-400">leave customers in the dark</span></>}
-        intro="Regulatory obligations and customer trust both demand that people understand why a decision was made about them. Most institutions have no scalable way to deliver this."
-        problems={problems}
-        theme={theme}
+        data={problemSolvedData}
       />
+
       <HowItWorks
         sectionTag="How It Works"
         heading={<>From model output to <span className="text-emerald-400">customer-ready explanation.</span></>}
