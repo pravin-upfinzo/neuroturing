@@ -186,7 +186,7 @@ const TrustOperatingSystem = () => {
           <div
             className="
               group/watch
-              h-[52px]
+              h-[62px]
               w-[180px]
               rounded-full
               bg-[linear-gradient(84.93deg,rgba(255,255,255,0.6)_1.96%,rgba(106,141,255,0.6)_50.04%,rgba(255,255,255,0.6)_93.96%)]
