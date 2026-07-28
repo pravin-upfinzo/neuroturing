@@ -13,7 +13,7 @@ function App() {
     <div className="min-h-screen bg-background text-textMain">
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
+        <Route path="/company" element={<About />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/products/clarity-core" element={<ClarityCore />} />
         <Route path="/products/insight-hub" element={<InsightHub />} />

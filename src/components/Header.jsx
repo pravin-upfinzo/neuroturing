@@ -90,9 +90,9 @@ const Header = () => {
           </div>
         </div>
 
-        <a href="#solutions" className={`${navItemBase} ${navItemInactive}`}>Solutions</a>
-        <Link to="/about" className={`${navItemBase} ${location.pathname === '/about' ? navItemActive : navItemInactive}`}>Why Us</Link>
-        <a href="#company" className={`${navItemBase} ${navItemInactive}`}>Company</a>
+        {/* <a href="#solutions" className={`${navItemBase} ${navItemInactive}`}>Solutions</a> */}
+        {/* <a href="#whyus" className={`${navItemBase} ${navItemInactive}`}>Why us</a> */}
+        <Link to="/company" className={`${navItemBase} ${location.pathname === '/company' ? navItemActive : navItemInactive}`}>Company</Link>
       </nav>
       </div>
 

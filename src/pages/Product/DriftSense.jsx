@@ -6,7 +6,8 @@ import AboutProduct from './components/AboutProduct';
 import ProblemItSolves from './components/ProblemItSolves';
 import HowItWorks from './components/HowItWorks';
 import { Activity, TrendingDown, GitMerge, Bell, Radio, Gauge, BarChart2, RefreshCw } from 'lucide-react';
-
+import driftSenseAboutImg from '../../images/Aboutproduct/DriftSense_Aboutproduct.png';
+import ProductBannerImage from '../../images/DriftSense.png';
 // ─── DriftSense Theme (Cyan / Teal) ─────────────────────────────────────────
 const theme = {
   gradientFrom: 'from-cyan-500',
@@ -27,17 +28,17 @@ const theme = {
 };
 
 const badges = [
-  { icon: <Radio className="w-4 h-4" />,     label: 'Live Monitoring',    sub: 'Stream-based' },
-  { icon: <Gauge className="w-4 h-4" />,     label: '50+ Drift Metrics', sub: 'PSI, KS, W-dist' },
-  { icon: <Bell className="w-4 h-4" />,      label: 'Smart Alerts',      sub: 'No false positives' },
-  { icon: <RefreshCw className="w-4 h-4" />, label: 'Auto-Remediation',  sub: 'Retrain trigger' },
+  { icon: <Radio className="w-4 h-4" />, label: 'Live Monitoring', sub: 'Stream-based' },
+  { icon: <Gauge className="w-4 h-4" />, label: '50+ Drift Metrics', sub: 'PSI, KS, W-dist' },
+  { icon: <Bell className="w-4 h-4" />, label: 'Smart Alerts', sub: 'No false positives' },
+  { icon: <RefreshCw className="w-4 h-4" />, label: 'Auto-Remediation', sub: 'Retrain trigger' },
 ];
 
 const highlights = [
-  { value: '97%',  label: 'Early Drift Detection',  description: 'Catches distributional shift before it materially impacts model performance.' },
-  { value: '<5min',label: 'Alert Latency',           description: 'From drift event to alert notification in under five minutes.' },
-  { value: '50+',  label: 'Drift Metrics',           description: 'PSI, KS test, Wasserstein distance, and custom metrics supported.' },
-  { value: '—71%', label: 'Model Failure Rate',      description: 'Institutions using DriftSense report significantly fewer production incidents.' },
+  { value: '97%', label: 'Early Drift Detection', description: 'Catches distributional shift before it materially impacts model performance.' },
+  { value: '<5min', label: 'Alert Latency', description: 'From drift event to alert notification in under five minutes.' },
+  { value: '50+', label: 'Drift Metrics', description: 'PSI, KS test, Wasserstein distance, and custom metrics supported.' },
+  { value: '—71%', label: 'Model Failure Rate', description: 'Institutions using DriftSense report significantly fewer production incidents.' },
 ];
 
 const problems = [
@@ -59,9 +60,9 @@ const problems = [
 ];
 
 const steps = [
-  { step: '01', title: 'Profile Your Data & Model',    description: 'DriftSense builds baseline statistical profiles of your training data distributions and model behaviour at deployment time.' },
-  { step: '02', title: 'Continuously Compare',          description: 'Streaming production data is compared against baselines using 50+ statistical tests. Anomalies are scored by severity and likely impact.' },
-  { step: '03', title: 'Smart Alert Routing',           description: 'Alerts are triaged by our intelligence layer—only material drift triggers notifications, with root-cause attribution included.' },
+  { step: '01', title: 'Profile Your Data & Model', description: 'DriftSense builds baseline statistical profiles of your training data distributions and model behaviour at deployment time.' },
+  { step: '02', title: 'Continuously Compare', description: 'Streaming production data is compared against baselines using 50+ statistical tests. Anomalies are scored by severity and likely impact.' },
+  { step: '03', title: 'Smart Alert Routing', description: 'Alerts are triaged by our intelligence layer—only material drift triggers notifications, with root-cause attribution included.' },
   { step: '04', title: 'Trigger Remediation Workflows', description: 'Automatically initiate retraining pipelines, shadow model deployments, or model rollbacks—all with a full audit log captured by ProofChain.' },
 ];
 
@@ -70,25 +71,23 @@ const DriftSense = () => (
     <div className="absolute top-0 left-0 w-full z-50"><Header /></div>
 
     <ProductHeroBanner
-      tagline="Model Drift Intelligence"
       title="DriftSense"
-      subtitle="Detect, diagnose, and respond to model drift before it becomes a crisis."
-      description="DriftSense is Neuroturing's continuous model health engine. It monitors data and concept drift across your entire model portfolio in real time—alerting only when it matters and triggering remediation automatically."
-      badges={badges}
-      theme={theme}
-      ctaLabel="Monitor Your Models"
-      ctaSecondary="See a Demo"
+      subtitle="Detect Anomalies and Model Drift Before They Become Risks"
+      description="DriftSense continuously monitors AI systems and transaction patterns to detect anomalies, performance drops, and emerging risks in real time."
+      productImage={ProductBannerImage}
     />
 
     <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <AboutProduct
-        sectionTag="About DriftSense"
-        heading={<>Stop reacting. Start <span className="text-cyan-400">predicting drift.</span></>}
-        body="DriftSense replaces reactive model monitoring with proactive drift intelligence. It understands the difference between noise and signal, surfaces only the alerts that matter, and gives your team the context to act decisively—before customers or regulators notice a problem."
-        highlights={highlights}
-        theme={theme}
+        sectionTag="explainable ai engine"
+        heading="About the Product"
+        body={[
+          "DriftSense is the monitoring and risk detection engine of the platform. In fast-changing financial environments, AI models can quickly become outdated or misaligned with new patterns.",
+          "DriftSense ensures your systems stay reliable by proactively identifying anomalies, behavioral shifts, and performance degradation—before they impact operations.",
+        ]}
+        image={driftSenseAboutImg}
       />
-      <ProblemItSolves
+      <ProblemItSolves 
         sectionTag="The Problem"
         heading={<>Why models <span className="text-cyan-400">drift into failure</span></>}
         intro="The world changes. Your training data does not. Every model deployed today is degrading—the question is whether you will know before or after a failure occurs."

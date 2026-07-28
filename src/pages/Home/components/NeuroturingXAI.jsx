@@ -21,7 +21,7 @@ const NeuroturingXAI = () => {
   ];
 
   return (
-    <section className="relative w-full overflow-hidden px-5 py-14 text-white">
+    <section className="relative w-full overflow-hidden py-14 text-white">
       {/* Bottom-left glow */}
       {/* <img
         src={bg}

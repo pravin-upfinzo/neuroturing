@@ -26,10 +26,10 @@ const Contact = () => {
             <span className="w-1.5 h-1.5 rounded-full bg-current" />
             Get in Touch
           </div>
-          <h1 className="text-5xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight leading-tight mb-6 bg-clip-text text-transparent bg-gradient-to-br from-cyan-400 to-blue-400" style={{ WebkitBackgroundClip: 'text' }}>
+          <h1 className="text-[60px] font-extrabold leading-[70px] bg-gradient-to-r from-[#B4F1FF] via-[#B4F1FF] to-[#357CCE] bg-clip-text text-transparent">
             Send Us A Message
           </h1>
-          <p className="text-lg text-gray-400 max-w-2xl mx-auto">
+          <p className="mt-4 text-[17px] font-normal leading-normal text-white">
             Tell us about your organization and we'll get back to you.
           </p>
         </div>

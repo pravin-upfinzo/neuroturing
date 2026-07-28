@@ -6,8 +6,8 @@ import AboutProduct from './components/AboutProduct';
 import ProblemItSolves from './components/ProblemItSolves';
 import HowItWorks from './components/HowItWorks';
 import { AlertTriangle, BarChart3, ShieldOff, Eye, GitBranch, Zap, Activity } from 'lucide-react';
-import clarityCoreImg from '../../images/ClarityCore.png';
-
+import clarityCoreAboutImg from '../../images/Aboutproduct/Claritycore_Aboutproduct.png';
+import ProductBannerImage from '../../images/claritycore.png';
 // ─── ClarityCore Theme (Blue) ────────────────────────────────────────────────
 const theme = {
   gradientFrom: 'from-blue-600',
@@ -29,17 +29,17 @@ const theme = {
 
 // Floating chips that orbit the product illustration
 const badges = [
-  { icon: <Eye className="w-4 h-4" />,      label: 'SHAP Explanations',    sub: 'Feature attribution' },
-  { icon: <GitBranch className="w-4 h-4" />, label: 'Decision Paths',       sub: 'Full trace' },
-  { icon: <Zap className="w-4 h-4" />,       label: 'Real-Time Output',     sub: '< 2ms latency' },
-  { icon: <Activity className="w-4 h-4" />,  label: 'Audit Logs',           sub: 'Immutable records' },
+  { icon: <Eye className="w-4 h-4" />, label: 'SHAP Explanations', sub: 'Feature attribution' },
+  { icon: <GitBranch className="w-4 h-4" />, label: 'Decision Paths', sub: 'Full trace' },
+  { icon: <Zap className="w-4 h-4" />, label: 'Real-Time Output', sub: '< 2ms latency' },
+  { icon: <Activity className="w-4 h-4" />, label: 'Audit Logs', sub: 'Immutable records' },
 ];
 
 const highlights = [
-  { value: '10×',  label: 'Faster Explanations',     description: 'Generate SHAP-quality results in milliseconds, not minutes.' },
-  { value: '99%',  label: 'Feature Coverage',         description: 'Explains every input variable across all model architectures.' },
-  { value: '—62%', label: 'Audit Prep Time',          description: 'Automated evidence packages ready in one click.' },
-  { value: '100%', label: 'Regulatory Traceability',  description: 'Full decision logs stored and exportable on demand.' },
+  { value: '10×', label: 'Faster Explanations', description: 'Generate SHAP-quality results in milliseconds, not minutes.' },
+  { value: '99%', label: 'Feature Coverage', description: 'Explains every input variable across all model architectures.' },
+  { value: '—62%', label: 'Audit Prep Time', description: 'Automated evidence packages ready in one click.' },
+  { value: '100%', label: 'Regulatory Traceability', description: 'Full decision logs stored and exportable on demand.' },
 ];
 
 const problems = [
@@ -91,24 +91,21 @@ const ClarityCore = () => {
       </div>
 
       <ProductHeroBanner
-        tagline="Explainable AI Engine"
         title="ClarityCore"
-        subtitle="Real-time, audit-ready explanations for every model decision."
-        description="ClarityCore is Neuroturing's core explainability engine. It wraps any black-box model with instant, human-readable reasoning—making every prediction transparent, defensible, and regulatory-ready."
-        productImage={clarityCoreImg}
-        badges={badges}
-        theme={theme}
-        ctaLabel="Get Started"
-        ctaSecondary="Request a Demo"
+        subtitle="Turn Complex AI Decisions into Clear, Actionable Insights"
+        description="ClarityCore translates black-box AI outputs into human-readable explanations—empowering teams to understand, trust, and act on every decision."
+        productImage={ProductBannerImage}
       />
 
       <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <AboutProduct
-          sectionTag="About ClarityCore"
-          heading={<>The explainability layer <span className="text-blue-400">every model needs.</span></>}
-          body="ClarityCore sits between your machine learning models and the business decisions they power. It generates SHAP-quality explanations in real time—without the performance penalty—and bundles them into structured, audit-ready packages that satisfy SR11-7, GDPR Article 22, and the EU AI Act."
-          highlights={highlights}
-          theme={theme}
+          sectionTag="explainable ai engine"
+          heading="About the Product"
+          body={[
+            "ClarityCore is the interpretation engine of the Neuroturing XAI platform. In high-stakes financial environments, AI models often produce decisions that are difficult to understand—even internally. ClarityCore bridges this gap by converting complex model outputs into structured, contextual explanations.",
+            "Whether it's a flagged transaction, delayed payout, or compliance trigger, ClarityCore ensures every decision is transparent, explainable, and actionable—without requiring deep technical expertise.",
+          ]}
+          image={clarityCoreAboutImg}
         />
 
         <ProblemItSolves

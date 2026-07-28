@@ -1,5 +1,4 @@
 import React from 'react';
-import DefaultImage from '../../../images/InsightHub.png'; // Fallback import
 
 /**
  * ProductHeroBanner
@@ -9,7 +8,7 @@ const ProductHeroBanner = ({
   title,
   subtitle,
   description,
-  productImage = DefaultImage,
+  productImage,
 }) => {
   return (
     <section className="w-full relative pt-28 sm:pt-32 pb-12 px-4 sm:px-6 lg:px-8 bg-black text-white flex flex-col items-center justify-center overflow-hidden">

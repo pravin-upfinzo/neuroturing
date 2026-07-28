@@ -6,7 +6,9 @@ import AboutProduct from './components/AboutProduct';
 import ProblemItSolves from './components/ProblemItSolves';
 import HowItWorks from './components/HowItWorks';
 import { Users, MessageSquare, Layers, FileText, Globe, CheckCircle2, Languages, Mic } from 'lucide-react';
+import explainTouchAboutImg from '../../images/Aboutproduct/ExplainTouch_Aboutproduct.png';
 
+import ProductBannerImage from '../../images/ExplainTouch.png';
 // ─── ExplainTouch Theme (Emerald / Green) ───────────────────────────────────
 const theme = {
   gradientFrom: 'from-emerald-500',
@@ -27,16 +29,16 @@ const theme = {
 };
 
 const badges = [
-  { icon: <Globe className="w-4 h-4" />,        label: '12+ Languages',    sub: 'Auto-localised' },
-  { icon: <CheckCircle2 className="w-4 h-4" />, label: 'GDPR Art. 22',    sub: 'Right to explain' },
-  { icon: <MessageSquare className="w-4 h-4" />,label: 'Any Channel',      sub: 'Email, SMS, API' },
-  { icon: <Mic className="w-4 h-4" />,           label: 'Plain Language',  sub: 'NLG-powered' },
+  { icon: <Globe className="w-4 h-4" />, label: '12+ Languages', sub: 'Auto-localised' },
+  { icon: <CheckCircle2 className="w-4 h-4" />, label: 'GDPR Art. 22', sub: 'Right to explain' },
+  { icon: <MessageSquare className="w-4 h-4" />, label: 'Any Channel', sub: 'Email, SMS, API' },
+  { icon: <Mic className="w-4 h-4" />, label: 'Plain Language', sub: 'NLG-powered' },
 ];
 
 const highlights = [
-  { value: '5×',   label: 'Customer Comprehension', description: 'Plain-language explanations tested against consumer focus groups.' },
-  { value: '—38%', label: 'Complaint Rate',          description: 'Institutions using ExplainTouch saw fewer credit-decision disputes.' },
-  { value: '12+',  label: 'Languages Supported',    description: 'Automatically localised explanations for global customer bases.' },
+  { value: '5×', label: 'Customer Comprehension', description: 'Plain-language explanations tested against consumer focus groups.' },
+  { value: '—38%', label: 'Complaint Rate', description: 'Institutions using ExplainTouch saw fewer credit-decision disputes.' },
+  { value: '12+', label: 'Languages Supported', description: 'Automatically localised explanations for global customer bases.' },
   { value: '100%', label: 'Right-to-Explain Ready', description: 'GDPR Article 22 compliance out of the box.' },
 ];
 
@@ -59,10 +61,10 @@ const problems = [
 ];
 
 const steps = [
-  { step: '01', title: 'Ingest Model Decisions',    description: 'ExplainTouch hooks into your decisioning pipeline and receives each model output along with its ClarityCore explanation payload.' },
+  { step: '01', title: 'Ingest Model Decisions', description: 'ExplainTouch hooks into your decisioning pipeline and receives each model output along with its ClarityCore explanation payload.' },
   { step: '02', title: 'Translate to Plain Language', description: 'Our NLG engine converts feature weights and decision paths into clear, jargon-free sentences calibrated to your customer segments.' },
-  { step: '03', title: 'Personalise & Localise',     description: 'Apply tone, language, and channel-specific templates. Deliver via email, SMS, in-app, or contact-centre scripts.' },
-  { step: '04', title: 'Log & Audit',                description: 'Every explanation delivered to a customer is stored immutably with a timestamp and delivery receipt for regulatory evidence.' },
+  { step: '03', title: 'Personalise & Localise', description: 'Apply tone, language, and channel-specific templates. Deliver via email, SMS, in-app, or contact-centre scripts.' },
+  { step: '04', title: 'Log & Audit', description: 'Every explanation delivered to a customer is stored immutably with a timestamp and delivery receipt for regulatory evidence.' },
 ];
 
 const ExplainTouch = () => (
@@ -70,23 +72,21 @@ const ExplainTouch = () => (
     <div className="absolute top-0 left-0 w-full z-50"><Header /></div>
 
     <ProductHeroBanner
-      tagline="Customer-Facing Explainability"
       title="ExplainTouch"
-      subtitle="Human-readable AI decisions, delivered directly to your customers."
-      description="ExplainTouch converts complex model outputs into plain-language explanations personalised for every customer—at the moment of decision, in any language, across any channel."
-      badges={badges}
-      theme={theme}
-      ctaLabel="Get Started"
-      ctaSecondary="See a Live Example"
+      subtitle="Communicate AI Decisions Clearly to Customers and Stakeholders"
+      description="ExplainTouch delivers simple, transparent explanations of AI decisions to end-users—enhancing trust and reducing confusion."
+      productImage={ProductBannerImage}
     />
 
     <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <AboutProduct
-        sectionTag="About ExplainTouch"
-        heading={<>Explainability that <span className="text-emerald-400">customers actually understand.</span></>}
-        body="ExplainTouch bridges the gap between technical model explanations and the people they affect. It takes the structured output from ClarityCore and transforms it into clear, compliant, personalised communications that build trust and reduce disputes."
-        highlights={highlights}
-        theme={theme}
+        sectionTag="explainable ai engine"
+        heading="About the Product"
+         body={[
+            "ExplainTouch is the communication layer of Neuroturing XAI. While AI systems make complex decisions, users only see outcomes—often without context.",
+            "ExplainTouch bridges this gap by transforming technical reasoning into clear, user-friendly messages, ensuring that customers and merchants always understand what’s happening and why.",
+          ]}
+        image={explainTouchAboutImg}
       />
       <ProblemItSolves
         sectionTag="The Problem"

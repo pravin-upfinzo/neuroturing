@@ -9,7 +9,7 @@ import footerlogo from '../images/footer-logo.png';
 const FOOTER_COLUMNS = [
   {
     title: 'Company',
-    links: ['Home', 'About Us', 'Solutions', 'Services', 'Industries', 'Compliance & Governance'],
+    links: ['Home', 'About Us'],
   },
   {
     title: 'Products',
@@ -28,7 +28,7 @@ const FOOTER_COLUMNS = [
 // Links that map to real routes instead of plain "#" anchors.
 const LINK_ROUTES = {
   Home: '/',
-  'About Us': '/about',
+  'About Us': '/company',
   'Contact Us': '/contact',
 };
 
@@ -44,10 +44,9 @@ const Footer = () => {
 
   return (
     <footer className="w-full bg-[#05070d] pt-16 relative z-20">
-      <div className="w-full max-w-7xl mx-auto px-6 lg:px-10">
-        <div className="grid grid-cols-1 md:grid-cols-12 gap-12 mb-16">
-          {/* Brand column */}
-          <div className="md:col-span-4 flex flex-col items-start gap-5">
+      <div className="w-full flex flex-col md:flex-row justify-between gap-20 lg:gap-44 max-w-7xl mx-auto px-6 lg:px-10 pb-10">
+        {/* Brand column */}
+        <div className="flex flex-col items-start gap-5">
             <div className="flex items-center gap-2.5">
               <span className="flex items-center justify-center">
                 {/* Swap for your logo.svg import if you'd rather use the asset directly */}
@@ -105,10 +104,10 @@ const Footer = () => {
               ))}
             </div>
           </div>
-
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
           {/* Link columns — Company / Products / Legal / Support, matching the screenshot */}
           {FOOTER_COLUMNS.map((col) => (
-            <div key={col.title} className="flex flex-col gap-4 md:col-span-2">
+            <div key={col.title} className="flex flex-col gap-4">
               <h4 className="text-white font-semibold text-xs tracking-[0.15em] uppercase mb-2">
                 {col.title}
               </h4>

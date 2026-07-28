@@ -6,7 +6,8 @@ import AboutProduct from './components/AboutProduct';
 import ProblemItSolves from './components/ProblemItSolves';
 import HowItWorks from './components/HowItWorks';
 import { PieChart, TrendingDown, Search, Bell, BarChart2, ShieldCheck, Layers, Activity } from 'lucide-react';
-import InsightHubImage from '../../images/InsightHub.png';
+import insightHubAboutImg from '../../images/Aboutproduct/InsightHub_Aboutproduct.png';
+import ProductBannerImage from '../../images/InsightHub.png';
 
 // ─── InsightHub Theme (Pink / Purple) ────────────────────────────────────────
 const theme = {
@@ -74,16 +75,19 @@ const InsightHub = () => (
       title="InsightHub"
       subtitle="Gain Complete Visibility into AI Decisions, Risks, and Trends"
       description="InsightHub provides a unified dashboard to monitor AI behavior, track trends, and drive data-informed decisions across your organization."
-      productImage={InsightHubImage}
+      productImage={ProductBannerImage}
     />
 
     <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <AboutProduct
-        sectionTag="About InsightHub"
-        heading={<>From fragmented metrics to <span className="text-pink-400">unified intelligence.</span></>}
-        body="InsightHub aggregates performance, fairness, and explainability signals from every model across your organisation. It replaces ad-hoc monitoring scripts with a governed, always-on observatory that keeps your AI portfolio compliant and performing."
-        highlights={highlights}
-        theme={theme}
+        sectionTag="explainable ai engine"
+        heading="About the Product"
+          body={[
+            "InsightHub is the intelligence and visualization layer of the platform. It consolidates data from all modules to provide a single, real-time view of AI operations, risks, and performance.",
+            "From fraud trends to payout delays, InsightHub enables teams and leadership to move from reactive to proactive decision-making.",
+          ]}
+
+        image={insightHubAboutImg}
       />
       <ProblemItSolves
         sectionTag="The Problem"
@@ -93,6 +97,7 @@ const InsightHub = () => (
         theme={theme}
       />
       <HowItWorks
+        small="sas"
         sectionTag="How It Works"
         heading={<>Governance on <span className="text-pink-400">autopilot.</span></>}
         steps={steps}

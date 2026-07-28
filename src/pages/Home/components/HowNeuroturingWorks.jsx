@@ -75,7 +75,7 @@ export default function HowNeuroturingWorks() {
   return (
     <>
      <section
-      className="w-full py-5 px-5 md:py-15 md:px-6 font-sans text-[#f5f7fa]"
+      className="w-full py-5 md:py-15 font-sans text-[#f5f7fa]"
     >
       <div className="max-w-[1200px] mx-auto">
         {/* Eyebrow */}
@@ -178,7 +178,7 @@ export default function HowNeuroturingWorks() {
         </div>
       </div>
     </section>
-     <section className="px-6 py-6 font-sans text-[#f5f7fa]">
+     <section className="py-6 font-sans text-[#f5f7fa]">
      <div
        className="mx-auto grid max-w-[1280px] grid-cols-1 gap-12 rounded-[32px] border border-white/[0.06] p-10 sm:rounded-3xl sm:p-14 lg:grid-cols-[0.85fr_1.15fr] lg:gap-16 lg:p-[72px_45px]"
        style={{
