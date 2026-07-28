@@ -6,6 +6,7 @@ import AboutProduct from './components/AboutProduct';
 import ProblemItSolves from './components/ProblemItSolves';
 import HowItWorks from './components/HowItWorks';
 import { PieChart, TrendingDown, Search, Bell, BarChart2, ShieldCheck, Layers, Activity } from 'lucide-react';
+import InsightHubImage from '../../images/InsightHub.png';
 
 // ─── InsightHub Theme (Pink / Purple) ────────────────────────────────────────
 const theme = {
@@ -27,17 +28,17 @@ const theme = {
 };
 
 const badges = [
-  { icon: <BarChart2 className="w-4 h-4" />,   label: 'Live Dashboards',    sub: 'Streaming updates' },
-  { icon: <ShieldCheck className="w-4 h-4" />, label: 'Fairness Metrics',   sub: '40+ KPIs' },
-  { icon: <Layers className="w-4 h-4" />,      label: 'Model Registry',    sub: 'All frameworks' },
-  { icon: <Activity className="w-4 h-4" />,    label: 'Drift Detection',   sub: 'Continuous' },
+  { icon: <BarChart2 className="w-4 h-4" />, label: 'Live Dashboards', sub: 'Streaming updates' },
+  { icon: <ShieldCheck className="w-4 h-4" />, label: 'Fairness Metrics', sub: '40+ KPIs' },
+  { icon: <Layers className="w-4 h-4" />, label: 'Model Registry', sub: 'All frameworks' },
+  { icon: <Activity className="w-4 h-4" />, label: 'Drift Detection', sub: 'Continuous' },
 ];
 
 const highlights = [
-  { value: '360°', label: 'Model Visibility',  description: 'Unified view across all models deployed in production.' },
-  { value: '<1s',  label: 'Insight Latency',   description: 'Dashboards refresh in under a second via streaming pipelines.' },
-  { value: '40+',  label: 'Built-in Metrics',  description: 'Accuracy, fairness, drift, and compliance KPIs out of the box.' },
-  { value: '100%', label: 'Audit Readiness',   description: 'Every event logged and exportable for regulatory review.' },
+  { value: '360°', label: 'Model Visibility', description: 'Unified view across all models deployed in production.' },
+  { value: '<1s', label: 'Insight Latency', description: 'Dashboards refresh in under a second via streaming pipelines.' },
+  { value: '40+', label: 'Built-in Metrics', description: 'Accuracy, fairness, drift, and compliance KPIs out of the box.' },
+  { value: '100%', label: 'Audit Readiness', description: 'Every event logged and exportable for regulatory review.' },
 ];
 
 const problems = [
@@ -60,9 +61,9 @@ const problems = [
 
 const steps = [
   { step: '01', title: 'Connect Your Model Registry', description: 'Point InsightHub at your MLflow, SageMaker, or Vertex AI registry to automatically ingest all deployed models.' },
-  { step: '02', title: 'Define KPIs & Thresholds',    description: 'Choose from 40+ built-in metrics or define custom ones. Set alert thresholds for accuracy, fairness, and data drift.' },
-  { step: '03', title: 'Monitor in Real Time',         description: 'Streaming dashboards surface anomalies the moment they occur, with root-cause attribution powered by ClarityCore.' },
-  { step: '04', title: 'Act & Document',               description: 'Trigger automated remediation workflows or escalate to human review—with a full audit trail generated automatically.' },
+  { step: '02', title: 'Define KPIs & Thresholds', description: 'Choose from 40+ built-in metrics or define custom ones. Set alert thresholds for accuracy, fairness, and data drift.' },
+  { step: '03', title: 'Monitor in Real Time', description: 'Streaming dashboards surface anomalies the moment they occur, with root-cause attribution powered by ClarityCore.' },
+  { step: '04', title: 'Act & Document', description: 'Trigger automated remediation workflows or escalate to human review—with a full audit trail generated automatically.' },
 ];
 
 const InsightHub = () => (
@@ -70,14 +71,10 @@ const InsightHub = () => (
     <div className="absolute top-0 left-0 w-full z-50"><Header /></div>
 
     <ProductHeroBanner
-      tagline="Model Intelligence Dashboard"
       title="InsightHub"
-      subtitle="360° real-time visibility across every model in production."
-      description="InsightHub is Neuroturing's unified monitoring and governance platform. It gives teams a single pane of glass to track model health, detect drift, measure fairness, and generate compliance evidence—continuously."
-      badges={badges}
-      theme={theme}
-      ctaLabel="Explore InsightHub"
-      ctaSecondary="Book a Demo"
+      subtitle="Gain Complete Visibility into AI Decisions, Risks, and Trends"
+      description="InsightHub provides a unified dashboard to monitor AI behavior, track trends, and drive data-informed decisions across your organization."
+      productImage={InsightHubImage}
     />
 
     <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

@@ -1,6 +1,7 @@
 import React from "react";
 import bg1 from "../../../images/bg1.svg";
 import bg2 from "../../../images/bg2.svg";
+import { Sparkles } from 'lucide-react';
 
 const TrustOperatingSystem = () => {
   return (
@@ -55,19 +56,10 @@ const TrustOperatingSystem = () => {
       {/* ================= CONTENT ================= */}
       <div className="relative z-10 text-center">
         {/* Small Heading */}
-        <p
-          className="
-            mb-8
-            font-['Inter']
-            text-[12px]
-            font-bold
-            leading-[3.6px]
-            tracking-[1.2px]
-            text-[#A6B2C7]
-          "
-        >
-          EXPERIENCE THE FUTURE
-        </p>
+        <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-cyan-500/30 bg-cyan-500/10 px-3 py-1 text-xs font-semibold uppercase tracking-wider text-cyan-400">
+            <span className="h-2 w-2 rounded-full bg-cyan-400" />
+            <span>EXPERIENCE THE FUTURE</span>
+          </div>
 
         {/* Main Heading */}
         <h1
@@ -116,63 +108,77 @@ const TrustOperatingSystem = () => {
           {/* ========== GET STARTED ========== */}
           <div className="group/demo relative inline-flex items-center justify-center">
             {/* White glow */}
-            <div
-              className="
-                pointer-events-none
-                absolute
-                bottom-[-10px]
-                left-1/2
-                h-[24px]
-                w-[140px]
-                -translate-x-1/2
-                rounded-full
-                bg-white/30
-                blur-xl
-                transition-all
-                duration-500
-                group-hover/demo:h-[36px]
-                group-hover/demo:w-[160px]
-                
-              "
-            />
+           
 
             <button
               className="
-                relative
-                z-10
-                flex
-                h-[52px]
-                w-[180px]
-                items-center
-                justify-center
-                gap-2
-                rounded-full
-                border
-                border-white/30
-                bg-[linear-gradient(110deg,rgba(25,40,62,0.95),rgba(12,25,45,0.9))]
-                font-['Inter']
-                text-[14px]
-                font-semibold
-                mix-blend-mode: screen;
-                text-white
-                transition-all
-                duration-300
-              "
+                  group
+                  relative
+                  flex
+                  h-[62px]
+                  w-[186px]
+                  items-center
+                  justify-center
+                  overflow-hidden
+                  rounded-[62px]
+                  border
+                  border-white/20
+                  bg-[#0A192F]
+                  shadow-[0_0_64px_rgba(21,93,214,.25)]
+                "
             >
-              <svg
-                viewBox="0 0 24 24"
-                fill="currentColor"
-                className="h-4 w-4 shrink-0"
-              >
-                <path d="M12 2l1.8 5.2L19 9l-5.2 1.8L12 16l-1.8-5.2L5 9l5.2-1.8L12 2z" />
+              <span
+                class="
+                    absolute
+                    left-1/2
+                    bottom-[-30px]
+                    h-[90px]
+                    w-[70px]
+                    -translate-x-1/2
+                    rounded-full
+                    bg-[radial-gradient(circle,#3FD1FF_68.5%,#266799_100%)]
+                    opacity-40
+                    blur-[36px]
+                    scale-75
+                    transition-all
+                    duration-500
+                    group-hover:scale-100
+                    group-hover:opacity-60
+                  "
+              ></span>
+              {/* Bottom to Top Glow */}
+              <div
+                className="
+                    absolute
+                    left-1/2
+                    top-full
+                    h-[130px]
+                    w-[130px]
+                    -translate-x-1/2
+                    rounded-full
 
-                <path
-                  d="M19 14l.9 2.6L22.5 17.5l-2.6.9L19 21l-.9-2.6-2.6-.9 2.6-.9L19 14z"
-                  opacity="0.7"
+                    bg-[radial-gradient(circle,#3FD1FF_0%,#266799_65%,transparent_100%)]
+
+                    opacity-40
+                    blur-[38px]
+
+                    transition-all
+                    duration-700
+                    ease-[cubic-bezier(.22,1,.36,1)]
+
+                    group-hover:top-1/2
+                    group-hover:-translate-y-1/2
+                  "
+              />
+
+              {/* Content */}
+              <span className="relative z-10 flex items-center gap-3">
+                <Sparkles
+                  className="transition-transform duration-500 group-hover:rotate-180"
+                  size={18}
                 />
-              </svg>
-
-              <span className="whitespace-nowrap">Get Started</span>
+                Book a Demo
+              </span>
             </button>
           </div>
 

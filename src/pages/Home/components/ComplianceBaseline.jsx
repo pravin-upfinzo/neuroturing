@@ -40,16 +40,15 @@ export default function ComplianceBaseline() {
             </span>
 
             <h2 className="mt-7 mb-6 text-[clamp(2rem,5vw,3.25rem)] font-extrabold leading-[1.12] tracking-[-0.01em]">
-              Compliance is the
+            Built for the New 
               <br />
               <span className="bg-gradient-to-r from-[#d6ecff] to-[#6f9ff2] bg-clip-text text-transparent">
-                New baseline.
+              AI Compliance Era
               </span>
             </h2>
 
             <p className="max-w-[520px] text-lg leading-[1.65] text-[#9aa4b8]">
-              Global and Indian regulators, including RBI and SEBI, now mandate
-              explainability, fairness, and auditability in AI systems.
+            Neuroturing XAI empowers financial institutions with transparent, compliant AI through real-time explainability, continuous monitoring, and immutable audit trails.
             </p>
           </div>
 

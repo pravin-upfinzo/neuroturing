@@ -67,27 +67,27 @@ function BorderBeamCard({
             {number}
           </span>
           
-          <div className="flex h-7 w-7 items-center justify-center rounded-full bg-blue-500/30 border border-blue-400/50 group-hover:bg-blue-500/50 transition-colors duration-300">
+          <div className="flex p-[6px] items-center justify-center rounded-full bg-[#1935B533] group-hover:bg-blue-700/40 transition-colors duration-300">
             <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="16"
-              height="16"
+              width="20"
+              height="20"
               viewBox="0 0 20 20"
               fill="none"
+              xmlns="http://www.w3.org/2000/svg"
             >
               <path
                 d="M16.6693 10.8311C16.6693 14.9978 13.7526 17.0811 10.2859 18.2894C10.1044 18.351 9.90722 18.348 9.7276 18.2811C6.2526 17.0811 3.33594 14.9978 3.33594 10.8311V4.99777C3.33594 4.77676 3.42374 4.5648 3.58002 4.40851C3.7363 4.25223 3.94826 4.16444 4.16927 4.16444C5.83594 4.16444 7.91927 3.16444 9.36927 1.89777C9.54582 1.74694 9.7704 1.66406 10.0026 1.66406C10.2348 1.66406 10.4594 1.74694 10.6359 1.89777C12.0943 3.17277 14.1693 4.16444 15.8359 4.16444C16.057 4.16444 16.2689 4.25223 16.4252 4.40851C16.5815 4.5648 16.6693 4.77676 16.6693 4.99777V10.8311Z"
-                stroke="#1E3A8A"
-                strokeWidth="1.2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
+                stroke="#0E95EC"
+                stroke-width="1.66667"
+                stroke-linecap="round"
+                stroke-linejoin="round"
               />
               <path
-                d="M7.5 10L9.16667 11.6667L12.5 8.33334"
-                stroke="#1E3A8A"
-                strokeWidth="1.2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
+                d="M7.5 10.0026L9.16667 11.6693L12.5 8.33594"
+                stroke="#0E95EC"
+                stroke-width="1.66667"
+                stroke-linecap="round"
+                stroke-linejoin="round"
               />
             </svg>
           </div>
@@ -113,25 +113,25 @@ export default function WhyExplainable() {
     {
       id: "1",
       number: "01 / 03",
-      title: "Opaque decisions",
+      title: "Opaque Decisions",
       description:
-        "Black-box models decline customers, approve fraud, and no one can say why.",
+        "Black-box AI makes it difficult to explain fraud alerts, payment delays, merchant blocks, and credit decisions.",
       delay: 0,
     },
     {
       id: "2",
       number: "02 / 03",
-      title: "Regulatory pressure",
+      title: "Regulatory Compliance",
       description:
-        "Regulators demand fairness, transparency and human oversight for every AI decision.",
+        "Financial regulations increasingly require AI decisions to be transparent, explainable, auditable, and accountable.",
       delay: 1,
     },
     {
       id: "3",
       number: "03 / 03",
-      title: "Trust at risk",
+      title: "Customer Trust",
       description:
-        "Customers lose trust when outcomes appear arbitrary or unexplainable.",
+        "Clear AI explanations build customer confidence, reduce disputes, and strengthen trust in financial services.",
       delay: 2,
     },
   ];
@@ -169,8 +169,8 @@ export default function WhyExplainable() {
 
           {/* Description */}
           <p className="text-base sm:text-lg leading-relaxed text-gray-300 lg:whitespace-nowrap">
-  Modern AI is powerful but invisible. In finance, invisibility is a liability — decisions must be understood, contested and defended.
-</p>
+              Financial institutions rely on AI, but black-box models limit transparency, regulatory compliance, and customer trust.
+          </p>
         </motion.div>
 
         {/* Cards Grid */}

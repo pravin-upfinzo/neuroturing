@@ -57,7 +57,7 @@ const Footer = () => {
             </div>
 
             <p className="text-white text-sm leading-relaxed max-w-xs">
-              Explainable intelligence for modern finance — neural links you can trust, audit, and prove.
+            The Explainable Intelligence Layer for Modern Finance. Transforming AI into transparent, accountable, and trusted financial intelligence.
             </p>
 
             {/* Subscribe input */}

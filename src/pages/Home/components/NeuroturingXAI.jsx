@@ -71,9 +71,7 @@ const NeuroturingXAI = () => {
               lg:text-[18px]
             "
           >
-            A first-principles platform that transforms black-box<br></br> financial AI
-            into transparent, auditable, and accountable intelligence — without
-            slowing your models.
+            Turn every AI decision into a transparent, explainable, and compliant outcome. Neuroturing XAI integrates seamlessly with your AI ecosystem for real-time governance and audit readiness.
           </p>
         </div>
 

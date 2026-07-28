@@ -59,7 +59,7 @@ const HeroSection = () => {
               Becomes Explainable
             </h1>
             <p className="mt-4 text-[17px] font-normal leading-normal text-white">
-              The Explainable Intelligence Layer for Modern Finance, AI predicts. XAI justifies.
+              The Explainable Intelligence Layer for Modern Finance, AI makes decisions. Neuroturing XAI explains them.
             </p>
 
             <div className="mt-10 flex flex-wrap items-center gap-4">

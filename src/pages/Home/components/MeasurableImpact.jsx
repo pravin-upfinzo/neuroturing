@@ -3,24 +3,24 @@ import React from 'react';
 const MeasurableImpact = () => {
   const metrics = [
     {
-      value: "2s",
-      label: "Explanation latency",
-      desc: "avg over 10M+ decisions"
-    },
-    {
-      value: "Minutes",
-      label: "Audit generation",
-      desc: "was 3–6 weeks manual"
-    },
-    {
-      value: "-62%",
-      label: "False positives",
-      desc: "on fraud surfaces"
+      value: "90%",
+      label: "Faster AI Investigations",
+      desc: "Instant AI explanations significantly reduce investigation time for fraud, payment, and compliance teams."
     },
     {
       value: "100%",
-      label: "Auditability",
-      desc: "every decision, signed"
+      label: "Audit-Ready Decisions",
+      desc: "Automatically generate complete, immutable audit trails for every AI-driven transaction and operational decision."
+    },
+    {
+      value: "60%",
+      label: "Less Manual Review Effort",
+      desc: "Reduce manual intervention through transparent AI insights that simplify operational workflows."
+    },
+    {
+      value: "Deploy",
+      label: "in Under 2 Weeks",
+      desc: "Go live quickly without retraining AI models or disrupting your existing technology stack."
     }
   ];
 

@@ -11,21 +11,21 @@ const CAPABILITIES = [
     icon: Explainer,
     tag: 'Explainer',
     name: 'ClarityCore™',
-    description: 'Translates AI decisions into human-readable explanations',
+    description: 'Transform complex AI predictions into simple, human-readable explanations that everyone can understand.',
   },
   {
     variant: 'audit',
     icon: Audit,
     tag: 'Audit',
     name: 'ProofChain™',
-    description: 'Creates immutable, regulator-ready audit trails',
+    description: 'Create immutable audit logs that satisfy regulatory and internal governance requirements.',
   },
   {
     variant: 'defence',
     icon: Defence,
     tag: 'Defence',
     name: 'DriftSense™',
-    description: 'Monitors model drift, bias, and anomalies in real time',
+    description: 'Monitor model drift, fairness, bias, and anomalies continuously across production AI systems.',
   },
   {
     variant: 'compliance',
@@ -33,7 +33,7 @@ const CAPABILITIES = [
     tag: 'Compliance',
     name: 'ExplainTouch™',
     description:
-      'Delivers plain-language explanations to customers & merchants',
+      'Deliver transparent, customer-friendly explanations that improve trust and reduce disputes.',
     wide: true,
   },
   {
@@ -41,7 +41,7 @@ const CAPABILITIES = [
     icon: Scoring,
     tag: 'Scoring',
     name: 'InsightHub™',
-    description: 'Executive dashboards for AI behaviour, trends, and risk',
+    description: 'Gain executive visibility through AI governance dashboards, compliance metrics, and operational intelligence.',
   },
 ];
 
@@ -127,7 +127,7 @@ function CapabilityCard({icon, tag, name, description, variant, wide}) {
       />
 
       {/* Top */}
-      <div className="relative z-10 flex items-center justify-between mb-10">
+      <div className="relative z-10 flex items-center justify-between mb-6">
         <div className="relative flex h-11 w-11 items-center justify-center rounded-full">
           {/* Outer Ring */}
           <div
@@ -163,11 +163,11 @@ function CapabilityCard({icon, tag, name, description, variant, wide}) {
       </div>
 
       {/* Content */}
-      <h3 className="relative z-10 mb-4 text-[28px] font-bold text-white">
+      <h3 className="relative z-10 mb-2 text-2xl font-semibold text-white">
         {name}
       </h3>
 
-      <p className="relative z-10 mb-10 max-w-[34ch] text-[#616174] leading-7">
+      <p className="relative z-10 mb-5 max-w-[34ch] text-sm text-[#616174] leading-6">
         {description}
       </p>
 
@@ -175,7 +175,7 @@ function CapabilityCard({icon, tag, name, description, variant, wide}) {
       <div className="relative z-10 flex items-center justify-between">
         <a
           href="#"
-          className="flex items-center gap-2 text-[#8F5DE4] font-semibold"
+          className="flex items-center gap-2 text-sm text-[#8F5DE4] font-medium"
         >
           Explore product
           <span className="transition-transform group-hover:translate-x-1">
@@ -200,7 +200,7 @@ export default function PlatformCapabilities() {
       <div className="mx-auto max-w-7xl">
         {/* Eyebrow */}
         <span
-          className="inline-flex items-center gap-2 px-4 py-[7px] rounded-full
+          className="inline-flex items-center gap-2 px-4 py-1 rounded-full
                      bg-[rgba(0,229,255,0.08)] border border-[rgba(0,229,255,0.35)]
                      text-[#00E5FF] text-xs font-bold uppercase tracking-[0.08em]"
         >
@@ -209,15 +209,15 @@ export default function PlatformCapabilities() {
         </span>
 
         {/* Heading */}
-        <h2 className="mt-6 text-4xl font-extrabold leading-tight md:text-5xl">
-          One platform{' '}
+        <h2 className="mt-5 text-4xl font-semibold leading-tight md:text-[50px]">
+          One Platform{' '}
           <span className="bg-gradient-to-r from-[#B4F1FF] via-[#B4F1FF] to-[#357CCE] bg-clip-text text-transparent">
-            Five modular capabilities.
+            Five Modular Capabilities.
           </span>
         </h2>
         {/* Description */}
         <p className="mt-5 mb-14 text-lg leading-8 text-white">
-          Each Neuroturing XAI module works independently — or together —
+          Each Neuroturing XAI module works independently or together
           forming a complete explainability and governance layer.
         </p>
 

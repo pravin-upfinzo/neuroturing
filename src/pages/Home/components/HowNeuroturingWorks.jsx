@@ -7,27 +7,27 @@ import Howitworks_3 from "../../../images/howitworks_3.svg";
 const STEPS = [
   {
     number: "01",
-    title: "Sense the model",
+    title: "Connect",
     description:
-      "Attach Neuroturing to any deployed AI. We ingest features, predictions and outcomes in real time.",
+      "Securely integrate with existing AI models, banking systems, payment infrastructure, LOS, LMS, and fraud engines using APIs.",
   },
   {
     number: "02",
-    title: "Explain & contextualise",
+    title: "Analyse",
     description:
-      "Every prediction is decomposed into human-readable, feature-level rationale with confidence.",
+      "Capture AI outputs, transaction events, model predictions, and operational data in real time.",
   },
   {
     number: "03",
-    title: "Govern & log",
+    title: "Explain",
     description:
-      "Auto-generated audit trails, signed decision receipts, live compliance posture.",
+      "Generate human-readable explanations while automatically creating immutable audit records and governance evidence.",
   },
   {
     number: "04",
-    title: "Act & evolve",
+    title: "Deliver",
     description:
-      "Detect drift, quantify risk, retrain with a full lineage of what changed and why.",
+      "Provide contextual insights to operations teams, compliance officers, fraud analysts, executives, customers, and regulators.",
   },
 ];
 
@@ -51,23 +51,23 @@ const OUTPUTS = [
 const RAILS = [
   {
     number: "01",
-    title: "Provable bond issuance",
-    description: "Every issuance justified, indexed, and cryptographically sealed.",
+    title: "Fraud Decision Explainability",
+    description: "Understand why transactions are flagged, approved, or blocked in real time.",
   },
   {
     number: "02",
-    title: "Escrow released with delayed credits",
-    description: "Explainable release logic — no ambiguity, no manual override.",
+    title: "AML & Risk Transparency",
+    description: "Explain every AML alert and risk score with complete regulatory traceability.",
   },
   {
     number: "03",
-    title: "Failed payouts & beneficiary mismatches",
-    description: "Root cause surfaced in seconds, not weeks.",
+    title: "Credit & Lending Decisions",
+    description: "Provide clear reasons behind approvals, declines, and credit risk assessments.",
   },
   {
     number: "04",
-    title: "Reconciliation with fund visibility",
-    description: "End-to-end money movement observable and defensible.",
+    title: "Audit & Compliance Intelligence",
+    description: "Maintain continuous governance with immutable audit trails and real-time monitoring.",
   },
 ];
 
@@ -197,7 +197,7 @@ export default function HowNeuroturingWorks() {
            End-to-End
            <br />
            <span className="bg-gradient-to-r from-[#d6ecff] to-[#6f9ff2] bg-clip-text text-transparent">
-             Use Cases
+           Payment Intelligence
            </span>
          </h2>
 
@@ -207,8 +207,8 @@ export default function HowNeuroturingWorks() {
          </p>
 
          <p className="max-w-[440px] text-base leading-[1.65] text-[#9aa4b8]">
-           The full money-movement lifecycle, explained. Every step of the financial
-           rail becomes transparent, provable and defensible.
+         Neuroturing XAI explains every AI decision across the
+         complete payment lifecycle, giving financial institutions complete visibility into every transaction.
          </p>
        </div>
 
