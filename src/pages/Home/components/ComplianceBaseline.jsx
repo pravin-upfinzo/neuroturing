@@ -19,9 +19,9 @@ const CARDS = [
 
 export default function ComplianceBaseline() {
   return (
-    <section className="w-full  px-6 py-10 font-sans text-[#f5f7fa]">
+    <section className="w-full  lg:px-6 sm:px-0 py-10 font-sans text-[#f5f7fa]">
       <div
-        className="relative mx-auto max-w-[1280px] overflow-hidden rounded-[32px] border border-white/[0.06] p-10 sm:p-14 lg:p-[72px_64px]"
+        className="relative mx-auto max-w-[1280px] overflow-hidden rounded-[32px] border border-white/[0.06] p-10  sm:p-14 lg:p-[72px_30px] md:p-[72px_64px]"
         style={{
           background:
             "radial-gradient(120% 160% at 100% 100%, rgba(99,102,241,0.10) 0%, #0a0d16 55%), radial-gradient(90% 140% at 0% 0%, rgba(239,68,68,0.06) 0%, transparent 45%), #05070c",
@@ -57,8 +57,7 @@ export default function ComplianceBaseline() {
             {CARDS.map(({ icon: Icon, iconBg, iconColor, title, description }) => (
               <div
                 key={title}
-                className="group flex items-start gap-5 rounded-2xl border border-white/[0.06] bg-white/[0.02] p-6
-                           transition-colors duration-300 hover:border-white/[0.12] hover:bg-white/[0.04]"
+                className="group flex flex-col items-center md:flex-row md:items-start gap-5 rounded-2xl border border-white/[0.06] bg-white/[0.02] p-6 transition-colors duration-300 hover:border-white/[0.12] hover:bg-white/[0.04]"
               >
                 <div
                   className={`flex h-14 w-14 flex-shrink-0 items-center justify-center rounded-2xl ${iconBg} shadow-[0_0_24px_rgba(124,92,252,0.25)]`}

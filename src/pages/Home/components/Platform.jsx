@@ -209,7 +209,7 @@ export default function PlatformCapabilities() {
         </span>
 
         {/* Heading */}
-        <h2 className="mt-5 text-4xl font-semibold leading-tight md:text-[50px]">
+        <h2 className="mt-5 text-4xl font-semibold leading-tight lg:text-[50px]  text-[36px]">
           One Platform{' '}
           <span className="bg-gradient-to-r from-[#B4F1FF] via-[#B4F1FF] to-[#357CCE] bg-clip-text text-transparent">
             Five Modular Capabilities.

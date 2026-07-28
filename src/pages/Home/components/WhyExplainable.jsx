@@ -137,7 +137,7 @@ export default function WhyExplainable() {
   ];
 
   return (
-    <section className="relative w-full overflow-hidden py-12">
+    <section className="relative w-full overflow-hidden py-12 lg:px-6 px-0">
       {/* Background glows */}
       <div className="absolute top-0 left-1/4 w-64 h-64 bg-cyan-500/5 rounded-full blur-3xl" />
       <div className="absolute bottom-20 right-1/3 w-56 h-56 bg-blue-500/5 rounded-full blur-3xl" />

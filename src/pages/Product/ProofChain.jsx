@@ -7,7 +7,7 @@ import ProblemItSolves from './components/ProblemItSolves';
 import HowItWorks from './components/HowItWorks';
 import { Lock, Link2, ShieldAlert, Database, Hash, FileCheck2, GitCommit, Timer } from 'lucide-react';
 import proofChainAboutImg from '../../images/Aboutproduct/ProofChain_Aboutproduct.png';
-import ProductBannerImage from '../../images/ProofChain.png';
+import ProductBannerImage from '../../images/Producetbanner/ProofChain.png';
 
 // ─── ProofChain Theme (Orange / Amber) ──────────────────────────────────────
 const theme = {

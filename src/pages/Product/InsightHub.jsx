@@ -7,7 +7,7 @@ import ProblemItSolves from './components/ProblemItSolves';
 import HowItWorks from './components/HowItWorks';
 import { PieChart, TrendingDown, Search, Bell, BarChart2, ShieldCheck, Layers, Activity } from 'lucide-react';
 import insightHubAboutImg from '../../images/Aboutproduct/InsightHub_Aboutproduct.png';
-import ProductBannerImage from '../../images/InsightHub.png';
+import ProductBannerImage from '../../images/Producetbanner/InsightHub.png';
 
 // ─── InsightHub Theme (Pink / Purple) ────────────────────────────────────────
 const theme = {

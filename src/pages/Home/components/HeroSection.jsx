@@ -4,7 +4,7 @@ import heroVideo from '../../../images/herobanner-img.mp4';
 
 const HeroSection = () => {
   return (
-    <section className="relative isolate w-full min-h-screen overflow-hidden bg-[#040814]">
+    <section className="relative isolate w-full xl:min-h-screen overflow-hidden bg-[#040814]">
       {/* Video — right-side element, bleeds off the edge */}
       <div className="absolute inset-y-0 right-0 w-full lg:w-[80%] overflow-hidden">
         <video
@@ -48,9 +48,9 @@ const HeroSection = () => {
         {/* Ambient background glow (visible on the left, behind the text) */}
         <div className="pointer-events-none absolute left-[-160px] top-1/2 h-[600px] w-[600px] -translate-y-1/2 rounded-full bg-blue-500/10 blur-[160px]" />
         <div className="pointer-events-none absolute left-44 top-24 h-[300px] w-[300px] rounded-full bg-cyan-400/10 blur-[150px]" />
-        <div className="flex min-h-screen items-center py-32">
+        <div className="flex xl:min-h-screen items-center py-32">
           <div className="max-w-[650px]">
-            <h1 className="text-[60px] font-extrabold leading-[70px] text-[#B4F1FF] [text-shadow:0_0_69.6px_rgba(21,93,214,0.80)]">
+            <h1 className="lg:text-[60px] text-[37px] font-extrabold lg:leading-[70px] leading-[43px]  text-[#B4F1FF] [text-shadow:0_0_69.6px_rgba(21,93,214,0.80)]">
               Where{" "}
               <span className="text-[#357CCE]">
                 Financial AI
@@ -70,7 +70,7 @@ const HeroSection = () => {
                   relative
                   flex
                   h-[62px]
-                  w-[186px]
+                  w-[242px]
                   items-center
                   justify-center
                   overflow-hidden

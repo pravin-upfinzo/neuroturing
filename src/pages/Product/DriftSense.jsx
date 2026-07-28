@@ -7,7 +7,7 @@ import ProblemItSolves from './components/ProblemItSolves';
 import HowItWorks from './components/HowItWorks';
 import { Activity, TrendingDown, GitMerge, Bell, Radio, Gauge, BarChart2, RefreshCw } from 'lucide-react';
 import driftSenseAboutImg from '../../images/Aboutproduct/DriftSense_Aboutproduct.png';
-import ProductBannerImage from '../../images/DriftSense.png';
+import ProductBannerImage from '../../images/Producetbanner/DriftSense.png';
 // ─── DriftSense Theme (Cyan / Teal) ─────────────────────────────────────────
 const theme = {
   gradientFrom: 'from-cyan-500',

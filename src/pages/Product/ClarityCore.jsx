@@ -7,7 +7,7 @@ import ProblemItSolves from './components/ProblemItSolves';
 import HowItWorks from './components/HowItWorks';
 import { AlertTriangle, BarChart3, ShieldOff, Eye, GitBranch, Zap, Activity } from 'lucide-react';
 import clarityCoreAboutImg from '../../images/Aboutproduct/Claritycore_Aboutproduct.png';
-import ProductBannerImage from '../../images/claritycore.png';
+import ProductBannerImage from '../../images/Producetbanner/claritycore.png';
 // ─── ClarityCore Theme (Blue) ────────────────────────────────────────────────
 const theme = {
   gradientFrom: 'from-blue-600',

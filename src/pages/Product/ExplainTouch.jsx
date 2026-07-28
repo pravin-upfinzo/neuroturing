@@ -8,7 +8,7 @@ import HowItWorks from './components/HowItWorks';
 import { Users, MessageSquare, Layers, FileText, Globe, CheckCircle2, Languages, Mic } from 'lucide-react';
 import explainTouchAboutImg from '../../images/Aboutproduct/ExplainTouch_Aboutproduct.png';
 
-import ProductBannerImage from '../../images/ExplainTouch.png';
+import ProductBannerImage from '../../images/Producetbanner/ExplainTouch.png';
 // ─── ExplainTouch Theme (Emerald / Green) ───────────────────────────────────
 const theme = {
   gradientFrom: 'from-emerald-500',

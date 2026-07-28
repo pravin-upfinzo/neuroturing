@@ -44,7 +44,7 @@ const MeasurableImpact = () => {
         </h2>
       </div>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 border-y border-neutral-800">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 border-y border-neutral-800 text-center md:text-left">
         {metrics.map((metric, idx) => (
           <div
             key={idx}
@@ -70,7 +70,7 @@ const MeasurableImpact = () => {
             </div>
 
             {/* Bottom Accent Bar matching the reference gradient */}
-            <div className="w-12 h-[3px] bg-gradient-to-r from-indigo-500 via-purple-400 to-pink-300 rounded-full mt-8" />
+            <div className="w-12 h-[3px] bg-gradient-to-r from-indigo-500 via-purple-400 to-pink-300 rounded-full mt-8 mx-auto" />
           </div>
         ))}
       </div>

@@ -12,7 +12,7 @@ const TrustOperatingSystem = () => {
         w-screen
         -translate-x-1/2
         overflow-hidden
-        py-14
+        py-10
         text-white
       "
     >
@@ -54,9 +54,9 @@ const TrustOperatingSystem = () => {
       />
 
       {/* ================= CONTENT ================= */}
-      <div className="relative z-10 text-center">
+      <div className="relative z-10 text-center text-left px-3">
         {/* Small Heading */}
-        <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-cyan-500/30 bg-cyan-500/10 px-3 py-1 text-xs font-semibold uppercase tracking-wider text-cyan-400">
+        <div className="mb-4 inline-flex  items-center gap-2 rounded-full border border-cyan-500/30 bg-cyan-500/10 px-3 py-1 text-xs font-semibold uppercase tracking-wider text-cyan-400">
             <span className="h-2 w-2 rounded-full bg-cyan-400" />
             <span>EXPERIENCE THE FUTURE</span>
           </div>
@@ -65,9 +65,11 @@ const TrustOperatingSystem = () => {
         <h1
           className="
             font-['Inter']
-            text-[56px]
+            lg:text-[56px]
+            text-[43px]
             font-bold
-            leading-[64px]
+            lg:leading-[64px]
+            leading-[43px]
             tracking-[-1.5px]
           "
         >
