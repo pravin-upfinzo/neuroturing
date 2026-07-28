@@ -5,6 +5,7 @@ import ProductHeroBanner from './components/ProductHeroBanner';
 import AboutProduct from './components/AboutProduct';
 import ProblemItSolves from './components/ProblemItSolves';
 import HowItWorks from './components/HowItWorks';
+import BusinessImpact from './components/BusinessImpact';
 import { Activity, TrendingDown, GitMerge, Bell, Radio, Gauge, BarChart2, RefreshCw } from 'lucide-react';
 import UndetectedFraudPatternImg from '../../images/products/icons/undetected-fraud-pattern.svg'
 import ModelPerformanceDegradationOvertimeImg from '../../images/products/icons/model-performance-degradation-overtime.svg'
@@ -12,7 +13,16 @@ import IncreaseFalsePositives from '../../images/products/icons/increase-false-p
 import LackofRealTimeMonitoring from '../../images/products/icons/lackof-real-time-monitoring.svg'
 
 import driftSenseAboutImg from '../../images/Aboutproduct/DriftSense_Aboutproduct.png';
+import businessImpactImg from '../../images/BusinessImpact/DriftSense/Business Impact.png';
+import impactIconFraud from '../../images/BusinessImpact/DriftSense/Prevents fraud.png';
+import impactIconAccuracy from '../../images/BusinessImpact/DriftSense/Improves AI.png';
+import impactIconFalse from '../../images/BusinessImpact/DriftSense/Reduces false.png';
 import ProductBannerImage from '../../images/Producetbanner/DriftSense.png';
+
+import icon1 from '../../images/compliance_value/continuous-monitoring.svg';
+import icon2 from '../../images/compliance_value/bias-detection.svg';
+import icon3 from '../../images/compliance_value/risk-governance.svg';
+import ComplianceValue from './components/ComplianceValue';
 // ─── DriftSense Theme (Cyan / Teal) ─────────────────────────────────────────
 const theme = {
   gradientFrom: 'from-cyan-500',
@@ -64,6 +74,19 @@ const problems = [
   },
 ];
 
+// ─── Business Impact (Orange, matching the Figma) ─────────────────────────────
+const impactTheme = {
+  cardBorderColor: 'border-orange-500/20',
+  iconBorderColor: 'border-orange-500/20',
+  accentTextColor: 'text-orange-400',
+};
+
+const impactItems = [
+  { icon: <img src={impactIconFraud} alt="" className="w-5 h-5 object-contain" />, label: 'Protects revenue by catching fraud and failures before customers ever feel them.' },
+  { icon: <img src={impactIconAccuracy} alt="" className="w-5 h-5 object-contain" />, label: 'Keeps your AI`s edge sharp with accuracy that holds up as markets shift.' },
+  { icon: <img src={impactIconFalse} alt="" className="w-5 h-5 object-contain" />, label: ' Frees up your team`s time - fewer false alarms,fewer manual reviews' },
+];
+
 const steps = [
   { step: '01', title: 'Profile Your Data & Model', description: 'DriftSense builds baseline statistical profiles of your training data distributions and model behaviour at deployment time.' },
   { step: '02', title: 'Continuously Compare', description: 'Streaming production data is compared against baselines using 50+ statistical tests. Anomalies are scored by severity and likely impact.' },
@@ -71,7 +94,37 @@ const steps = [
   { step: '04', title: 'Trigger Remediation Workflows', description: 'Automatically initiate retraining pipelines, shadow model deployments, or model rollbacks—all with a full audit log captured by ProofChain.' },
 ];
 
+const complianceCards = [
+  {
+    imgSrc: icon1,
+    subtitle: 'Continuous, real-time oversight instead of point-in-time compliance checks.',
+  },
+  {
+    imgSrc: icon2,
+    subtitle: 'Surfaces fairness gaps and bias before they become a public problem',
+  },
+  {
+    imgSrc: icon3,
+    subtitle: 'Gives you a defensible, audit-ready record of AI performance over time.',
+  },
+];
 
+const complianceTheme = {
+  borderGradient: 'from-[#4a3f2d]/60 via-[#2a2419]/40 to-[#14110c]/30',
+  borderGradientHover: 'hover:from-[#947c56]/80 hover:via-[#5e4e37]/70 hover:to-[#332a1e]/50',
+  cardBg: 'bg-gradient-to-b from-[#292318]/90 via-[#19150f]/95 to-[#0e0c08]',
+  innerBg: 'bg-gradient-to-b from-[#3b3223]/70 via-[#292318]/60 to-[#1b1710]/70',
+  innerBgHover: 'group-hover:from-[#524631]/80 group-hover:via-[#3b3223]/75 group-hover:to-[#262016]/80',
+  innerBorder: 'border-[#5c4e37]/50',
+  innerBorderHover: 'group-hover:border-[#947c56]/70',
+  ringBorder: 'border-[#dfc399]/25',
+  ringBorderHover: 'group-hover:border-[#ebd2ad]/60',
+  glowGradient: 'from-[#947c56]/35 to-[#dfc399]/20',
+  glowGradientHover: 'group-hover:from-[#b3966a]/55 group-hover:to-[#ebd2ad]/35',
+  imgShadow: 'drop-shadow-[0_4px_14px_rgba(223,195,153,0.3)]',
+  imgShadowHover: 'group-hover:drop-shadow-[0_6px_20px_rgba(235,210,173,0.5)]',
+  cardShadowHover: 'hover:shadow-[0_12px_35px_rgba(148,124,86,0.25)]',
+}
 const problemSolvedData = {
   title: "Problem It Solves",
   badge: "Core Challenges",
@@ -88,23 +141,18 @@ const problemSolvedData = {
     {
       id: 1,
       icon: UndetectedFraudPatternImg,
-      description: "Undetected fraud patterns and anomalies",
+      description: "Catches fraud patterns and anomalies in real time, before they escalate",
     },
     {
       id: 2,
       icon: ModelPerformanceDegradationOvertimeImg,
-      description: "Model performance degradation over time",
+      description: "Flags model drift the moment accuracy starts slipping in production",
     },
     {
       id: 3,
       icon: IncreaseFalsePositives,
-      description: "Increasing false positives or missed risks",
-    },
-    {
-      id: 4,
-      icon: LackofRealTimeMonitoring,
-      description: "Lack of real-time monitoring",
-    },
+      description: "Cuts through false-positive noise so real threats never get buried in alerts",
+    }
   ],
 };
 
@@ -129,9 +177,9 @@ const DriftSense = () => (
         ]}
         image={driftSenseAboutImg}
       />
-     
 
-      
+
+
       <ProblemItSolves
         data={problemSolvedData}
       />
@@ -141,6 +189,23 @@ const DriftSense = () => (
         steps={steps}
         theme={theme}
         cta={{ label: 'Explore the Documentation', href: '#' }}
+      />
+
+      <ComplianceValue
+        smalltitle="TRUST & COMPLIANCE"
+        title="Compliance Value"
+        description="Establish a culture of accountability that bridges the gap between technical execution and public-facing transparency."
+        cards={complianceCards}
+        theme={complianceTheme}
+      />
+
+      <BusinessImpact
+        sectionTag="The Impact"
+        heading="Business Impact"
+        intro="Maximize your competitive edge with AI that maintains peak accuracy and long-term reliability in shifting markets."
+        items={impactItems}
+        image={businessImpactImg}
+        theme={impactTheme}
       />
     </div>
     <Footer />

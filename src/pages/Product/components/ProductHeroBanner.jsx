@@ -29,7 +29,7 @@ const ProductHeroBanner = ({
       </div>
 
       {/* Hero Image Container (Lifted higher) */}
-      <div className="relative z-10 w-full max-w-5xl mx-auto flex items-center justify-center -mt- sm:-mt-10">
+      <div className="relative z-10 w-full max-w-7xl mx-auto flex items-center justify-center -mt-5 sm:-mt-10 px-2 sm:px-4">
         <img
           src={productImage}
           alt={title}

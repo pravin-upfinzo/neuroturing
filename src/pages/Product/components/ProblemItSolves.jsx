@@ -18,7 +18,7 @@ const ProblemItSolves = ({ data }) => {
                 {data.description}
             </p>
 
-            <div className="mt-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-8 gap-y-12">
+            <div className="mt-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-12">
                 {data.details.map((item) => (
                     <div
                         key={item.id}

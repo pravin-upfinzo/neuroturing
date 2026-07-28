@@ -5,12 +5,22 @@ import ProductHeroBanner from './components/ProductHeroBanner';
 import AboutProduct from './components/AboutProduct';
 import ProblemItSolves from './components/ProblemItSolves';
 import HowItWorks from './components/HowItWorks';
+import BusinessImpact from './components/BusinessImpact';
 import { PieChart, TrendingDown, Search, Bell, BarChart2, ShieldCheck, Layers, Activity } from 'lucide-react';
 import LackOfActionImg from '../../images/products/icons/lackof-action-insights.svg'
 import DifficultyIdentifyingTrends from '../../images/products/icons/difficulty-identifying-trends.svg'
 import LimitedDecisionIntelligenceImg from '../../images/products/icons/limited-decision-intelligence.svg'
 import LackOfVisibilityImg from '../../images/products/icons/lackof-visibility.svg'
 import insightHubAboutImg from '../../images/Aboutproduct/InsightHub_Aboutproduct.png';
+
+import icon1 from '../../images/compliance_value/audit-dashboard.svg';
+import icon2 from '../../images/compliance_value/track-events.svg';
+import icon3 from '../../images/compliance_value/transparency.svg';
+import ComplianceValue from './components/ComplianceValue';
+import businessImpactImg from '../../images/BusinessImpact/InsightHub/Business Impact.png';
+import impactIconDataDriven from '../../images/BusinessImpact/InsightHub/Vector.png';
+import impactIconOptimization from '../../images/BusinessImpact/InsightHub/Union.png';
+import impactIconEfficiency from '../../images/BusinessImpact/InsightHub/Vector2.png';
 import ProductBannerImage from '../../images/Producetbanner/InsightHub.png';
 
 // ─── InsightHub Theme (Pink / Purple) ────────────────────────────────────────
@@ -64,6 +74,25 @@ const problems = [
   },
 ];
 
+// ─── Business Impact (Copper / Amber, matching the outcome icons) ─────────────
+const impactTheme = {
+  glowColor: 'rgba(200,135,63,0.18)',
+  tagBorderColor: 'border-amber-500/30',
+  tagTextColor: 'text-amber-400',
+  tagBgColor: 'bg-amber-500/10',
+  cardBorderColor: 'border-amber-500/20',
+  iconBorderColor: 'border-amber-500/20',
+  accentTextColor: 'text-amber-400',
+  railFrom: '#F5D9BE',
+  railTo: '#C6873F',
+};
+
+const impactItems = [
+  { icon: <img src={impactIconDataDriven} alt="" className="w-5 h-5 object-contain" />, label: 'One source of truth turns scattered data into confident, fast decisions' },
+  { icon: <img src={impactIconEfficiency} alt="" className="w-5 h-5 object-contain" />, label: 'Resources go where they are needed most — no more guessing' },
+  { icon: <img src={impactIconOptimization} alt="" className="w-5 h-5 object-contain" />, label: ' Spot optimization opportunities before your competitors even notice them.' },
+];
+
 const steps = [
   { step: '01', title: 'Connect Your Model Registry', description: 'Point InsightHub at your MLflow, SageMaker, or Vertex AI registry to automatically ingest all deployed models.' },
   { step: '02', title: 'Define KPIs & Thresholds', description: 'Choose from 40+ built-in metrics or define custom ones. Set alert thresholds for accuracy, fairness, and data drift.' },
@@ -71,6 +100,37 @@ const steps = [
   { step: '04', title: 'Act & Document', description: 'Trigger automated remediation workflows or escalate to human review—with a full audit trail generated automatically.' },
 ];
 
+const complianceCards = [
+  {
+    imgSrc: icon1,
+    subtitle: "Audit-ready dashboards bring every compliance metric into one clear view",
+  },
+  {
+    imgSrc: icon2,
+    subtitle: "Automated tracking catches deviations the moment they happen, not after",
+  },
+  {
+    imgSrc: icon3,
+    subtitle: "Gives regulators and leadership a transparent, verifiable window into your AI.",
+  },
+];
+
+const complianceTheme = {
+  borderGradient: 'from-[#4a3429]/60 via-[#2a1d17]/40 to-[#140e0b]/30',
+  borderGradientHover: 'hover:from-[#8c5e47]/80 hover:via-[#52372a]/70 hover:to-[#2e1d15]/50',
+  cardBg: 'bg-gradient-to-b from-[#2a1d17]/90 via-[#18110e]/95 to-[#0d0907]',
+  innerBg: 'bg-gradient-to-b from-[#38261e]/70 via-[#271a14]/60 to-[#1a110d]/70',
+  innerBgHover: 'group-hover:from-[#4d3328]/80 group-hover:via-[#36231b]/75 group-hover:to-[#241712]/80',
+  innerBorder: 'border-[#593c2f]/50',
+  innerBorderHover: 'group-hover:border-[#8c5e47]/70',
+  ringBorder: 'border-[#d4a387]/25',
+  ringBorderHover: 'group-hover:border-[#e3b89e]/60',
+  glowGradient: 'from-[#8c5e47]/35 to-[#d4a387]/20',
+  glowGradientHover: 'group-hover:from-[#a67156]/55 group-hover:to-[#e3b89e]/35',
+  imgShadow: 'drop-shadow-[0_4px_14px_rgba(212,163,135,0.3)]',
+  imgShadowHover: 'group-hover:drop-shadow-[0_6px_20px_rgba(227,184,158,0.5)]',
+  cardShadowHover: 'hover:shadow-[0_12px_35px_rgba(140,94,71,0.25)]',
+}
 const problemSolvedData = {
   title: "Problem It Solves",
   badge: "Core Challenges",
@@ -81,29 +141,24 @@ const problemSolvedData = {
     "from-[#EAA68D] to-[#9E6350] shadow-[0_8px_20px_-6px_rgba(234,166,141,0.45)]",
 
   borderStyle:
-  "bg-[linear-gradient(180deg,rgba(217,126,94,0)_0%,#D97E5E_47.12%,rgba(217,126,94,0)_100%)]",
+    "bg-[linear-gradient(180deg,rgba(217,126,94,0)_0%,#D97E5E_47.12%,rgba(217,126,94,0)_100%)]",
 
   details: [
     {
       id: 1,
       icon: LackOfVisibilityImg,
-      description: "Fragmented visibility across systems",
+      description: "Pulls fragmented systems into one unified, real-time command view.",
     },
     {
       id: 2,
       icon: LackOfActionImg,
-      description: "Lack of actionable insights from AI decisions",
+      description: "Converts raw AI output into intelligence leadership can actually act on.",
     },
     {
       id: 3,
       icon: DifficultyIdentifyingTrends,
-      description: "Difficulty identifying trends and bottlenecks",
-    },
-    {
-      id: 4,
-      icon: LimitedDecisionIntelligenceImg,
-      description: "Limited decision intelligence for leadership",
-    },
+      description: "Surfaces hidden bottlenecks and trends before they turn into losses",
+    }
   ],
 };
 
@@ -122,18 +177,14 @@ const InsightHub = () => (
       <AboutProduct
         sectionTag="explainable ai engine"
         heading="About the Product"
-          body={[
-            "InsightHub is the intelligence and visualization layer of the platform. It consolidates data from all modules to provide a single, real-time view of AI operations, risks, and performance.",
-            "From fraud trends to payout delays, InsightHub enables teams and leadership to move from reactive to proactive decision-making.",
-          ]}
+        body={[
+          "InsightHub is the intelligence and visualization layer of the platform. It consolidates data from all modules to provide a single, real-time view of AI operations, risks, and performance.",
+          "From fraud trends to payout delays, InsightHub enables teams and leadership to move from reactive to proactive decision-making.",]}
 
         image={insightHubAboutImg}
       />
-    
 
-      <ProblemItSolves
-        data={problemSolvedData}
-      />
+      <ProblemItSolves data={problemSolvedData} />
       <HowItWorks
         small="sas"
         sectionTag="How It Works"
@@ -142,6 +193,23 @@ const InsightHub = () => (
         theme={theme}
         cta={{ label: 'View Full Docs', href: '#' }}
       />
+      <ComplianceValue
+        smalltitle="TRUST & COMPLIANCE"
+        title="Compliance Value"
+        description="Establish a culture of accountability that bridges the gap between technical execution and public-facing transparency."
+        cards={complianceCards}
+        theme={complianceTheme}
+      />
+
+      <BusinessImpact
+        sectionTag="The Impact"
+        heading="Business Impact"
+        intro="Maximize operational efficiency by automating the path from observation to action, ensuring your resources are always deployed where they matter most."
+        items={impactItems}
+        image={businessImpactImg}
+        theme={impactTheme}
+      />
+
     </div>
     <Footer />
   </div>
