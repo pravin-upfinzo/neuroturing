@@ -7,62 +7,59 @@ const sections = [
   {
     title: 'Information We Collect',
     body:
-      'Neuroturing may collect personal information that you voluntarily provide through forms on this website, such as your name, email address, company name, phone number, and any message or business details you choose to share.',
-  },
-  {
-    title: 'How We Use Information',
-    body:
-      'We use the information collected through the website to respond to inquiries, provide requested information, improve our services, maintain website functionality, and communicate updates that may be relevant to your interaction with Neuroturing.',
+      'We may collect:',
     points: [
-      'Respond to contact requests and business inquiries.',
-      'Improve website performance, usability, and user experience.',
-      'Send relevant operational or marketing communications where permitted.',
+      'Name, company name, designation, email address, and phone number.',
+      'Business information submitted through contact or demo request forms.',
+      'Website usage data such as browser type, IP address, device information, and pages visited.',
+      'Cookies and analytics data used to improve website performance.',
+      'Neuroturing does not intentionally collect confidential financial, payment, or personally sensitive customer data through this website.',
     ],
   },
   {
-    title: 'Automatically Collected Data',
+    title: 'How We Use Your Information',
     body:
-      'When you visit the website, certain technical information may be collected automatically, such as browser type, device information, IP address, pages visited, referring URLs, and general usage behavior. This information helps us understand how the site is being used and how it can be improved.',
-  },
-  {
-    title: 'Cookies and Tracking Technologies',
-    body:
-      'The website may use cookies and similar technologies to support essential functionality, improve site experience, and analyze aggregate traffic patterns. Additional details are described in our Cookie Policy.',
-  },
-  {
-    title: 'How We Share Information',
-    body:
-      'Neuroturing does not sell personal information. We may share information with trusted service providers or advisors who support website operations, communications, analytics, or legal compliance, subject to appropriate confidentiality and security obligations.',
+      'We use your information to:',
+    points: [
+      'Respond to enquiries and demo requests.',
+      'Provide information about our products and services.',
+      'Improve website functionality and user experience.',
+      'Communicate important updates.',
+      'Maintain website security and prevent misuse.',
+      'Meet applicable legal and regulatory obligations.',
+    ],
   },
   {
     title: 'Data Security',
     body:
-      'We take reasonable administrative, technical, and organizational measures to protect personal information from unauthorized access, loss, misuse, or disclosure. However, no method of transmission or storage can be guaranteed as completely secure.',
+      'We implement appropriate administrative, technical, and organizational safeguards designed to protect information against unauthorized access, disclosure, alteration, or destruction.',
+  },
+  {
+    title: 'Data Sharing',
+    body:
+      'We do not sell or rent your personal information. Information may only be shared with:',
+    points: [
+      'Authorized service providers supporting our operations.',
+      'Legal or regulatory authorities where required by law.',
+      'Successors in the event of a merger, acquisition, or business restructuring.',
+    ],
   },
   {
     title: 'Data Retention',
     body:
-      'Personal information is retained only for as long as necessary to fulfill the purpose for which it was collected, comply with legal obligations, resolve disputes, or enforce our agreements and legitimate business interests.',
+      'Information is retained only for as long as necessary to fulfil the purposes described in this Privacy Policy or as required by applicable law.',
   },
   {
     title: 'Your Rights',
     body:
-      'Depending on applicable law, you may have rights relating to the personal information we hold about you, including the right to request access, correction, deletion, or restriction of processing. You may also object to certain uses of your information where permitted by law.',
-  },
-  {
-    title: 'Third-Party Services',
-    body:
-      'This website may contain links to external websites or may rely on third-party service providers for hosting, analytics, or communications. Neuroturing is not responsible for the privacy practices of third-party websites or services outside our control.',
-  },
-  {
-    title: 'Updates to This Policy',
-    body:
-      'We may update this Privacy Policy from time to time to reflect legal, operational, or business changes. The latest version will always be available on this page, and continued use of the website after updates indicates acceptance of the revised policy.',
-  },
-  {
-    title: 'Contact Us',
-    body:
-      'If you have any questions about this Privacy Policy or how your information is handled, please contact Neuroturing through the contact page or by email at info@neuroturing.com.',
+      'Depending on applicable laws, you may request to:',
+    points: [
+      'Access your personal information.',
+      'Correct inaccurate information.',
+      'Request deletion of your information.',
+      'Withdraw consent where applicable.',
+      'Contact us regarding privacy concerns.',
+    ],
   },
 ];
 
@@ -97,12 +94,11 @@ const PrivacyPolicy = () => {
             </h1>
 
             <p className="mx-auto max-w-3xl text-lg leading-8 text-gray-400">
-              This policy explains what information Neuroturing may collect through the website,
-              how that information is used, and the safeguards applied to protect it.
+            At Neuroturing, protecting your privacy and safeguarding your information is fundamental to our commitment to responsible AI. This Privacy Policy explains how we collect, use, disclose, and protect information when you visit our website or engage with our products and services.
             </p>
 
             <div className="mt-8 inline-flex rounded-full border border-white/10 bg-white/[0.03] px-5 py-2 text-sm text-gray-300">
-              Effective date: July 28, 2026
+              Effective date: July 29, 2026
             </div>
           </div>
 
@@ -116,6 +112,52 @@ const PrivacyPolicy = () => {
                 points={section.points}
               />
             ))}
+          </div>
+          <div className="mt-12 rounded-3xl border border-white/10 bg-white/[0.03] p-8">
+            <h2 className="mb-4 text-2xl font-bold text-white">
+              Contact
+            </h2>
+
+            <p className="mb-6 leading-7 text-gray-400">
+                For privacy-related questions, contact:
+            </p>
+
+            <div className="space-y-4">
+              <div>
+                <p className="text-sm font-semibold uppercase tracking-wide text-cyan-400">
+                  Company
+                </p>
+                <p className="mt-1 text-gray-300">
+                  Neuroturing
+                </p>
+              </div>
+
+              <div>
+                <p className="text-sm font-semibold uppercase tracking-wide text-cyan-400">
+                  Email
+                </p>
+                <a
+                  href="mailto:info@neuroturing.com"
+                  className="mt-1 text-white transition-colors hover:text-cyan-400"
+                >
+                  info@neuroturing.com
+                </a>
+              </div>
+
+              <div>
+                <p className="text-sm font-semibold uppercase tracking-wide text-cyan-400">
+                  Website
+                </p>
+                <a
+                  href="https://neuroturing.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="mt-1 text-white transition-colors hover:text-cyan-400"
+                >
+                  www.neuroturing.com
+                </a>
+              </div>
+            </div>
           </div>
         </div>
       </section>

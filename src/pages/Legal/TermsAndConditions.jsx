@@ -5,59 +5,54 @@ import LegalSection from './components/LegalSection';
 
 const sections = [
   {
-    title: 'Acceptance of Terms',
+    title: 'Website Use',
     body:
-      'By accessing, browsing, or using the Neuroturing website and its related content, you agree to be bound by these Terms & Conditions. If you do not agree with any part of these terms, you should discontinue use of the website immediately.',
-  },
-  {
-    title: 'Use of the Website',
-    body:
-      'You may use this website only for lawful purposes and in a manner that does not infringe the rights of, restrict, or inhibit the use of this site by any other person or organization.',
-    points: [
-      'Do not attempt to gain unauthorized access to any part of the platform or related systems.',
-      'Do not copy, reproduce, republish, or distribute website content without prior written permission.',
-      'Do not use the website to transmit harmful, misleading, or unlawful material.',
-    ],
+      "The information available on this website is provided for general informational purposes regarding Neuroturing's products, services, and solutions. Unauthorized use of this website may give rise to legal action",
   },
   {
     title: 'Intellectual Property',
     body:
-      'All content on this website, including text, visual assets, graphics, branding, product names, and design elements, is owned by or licensed to Neuroturing unless otherwise stated. These materials are protected by applicable intellectual property laws.',
+      'All content, including text, graphics, product names, trademarks, logos, software, documentation, and website design, is the exclusive property of Neuroturing unless otherwise stated. No content may be copied, reproduced, distributed, or modified without prior written permission.',
   },
   {
-    title: 'Product and Service Information',
+    title: 'Product Information',
     body:
-      'Information presented on the website about Neuroturing products, services, and capabilities is provided for general informational purposes only. We reserve the right to modify, update, or discontinue any offering without prior notice.',
+      'Product descriptions, features, specifications, and service offerings are provided for informational purposes only and may change without prior notice. Availability of products or services may vary by region or customer engagement.',
   },
   {
-    title: 'Third-Party Links',
+    title: 'Demo Requests',
     body:
-      'This website may include links to third-party websites or platforms for convenience. Neuroturing does not control and is not responsible for the content, security, or privacy practices of those third-party services.',
+      'Submitting a demo request or contact form does not create a commercial relationship or guarantee service availability. Neuroturing reserves the right to accept or decline engagements at its discretion.',
   },
   {
-    title: 'Disclaimer of Warranties',
+    title: 'Privacy',
     body:
-      'The website and its contents are provided on an "as is" and "as available" basis. Neuroturing makes no warranties, express or implied, regarding the availability, accuracy, reliability, or completeness of the website or its materials.',
+      'Any information submitted through our website is handled in accordance with our Privacy Policy. Users are responsible for ensuring that the information they provide is accurate and lawful.',
+  },
+  {
+    title: 'Third-Party Services',
+    body:
+      'Our website may contain links to third-party websites or services. Neuroturing is not responsible for their content, availability, or privacy practices.',
+  },
+  {
+    title: 'Disclaimer',
+    body:
+      'The website and its content are provided on an "as is" and "as available" basis without warranties of any kind. Neuroturing does not guarantee uninterrupted or error-free access to the website.',
   },
   {
     title: 'Limitation of Liability',
     body:
-      'To the fullest extent permitted by law, Neuroturing shall not be liable for any direct, indirect, incidental, consequential, or special damages arising from or related to your use of, or inability to use, this website.',
+      'To the maximum extent permitted by law, Neuroturing shall not be liable for any direct, indirect, incidental, consequential, or special damages arising from the use of this website or reliance on its content.',
   },
   {
-    title: 'Privacy and Data Use',
+    title: 'Governing Law',
     body:
-      'Any personal information submitted through this website, including through contact or subscription forms, is handled in accordance with our privacy practices. Users should ensure that the information they provide is accurate and lawful to share.',
+      'The laws of India shall govern these Terms & Conditions. Any disputes arising from the use of this website shall be subject to the exclusive jurisdiction of the courts located in India.',
   },
   {
     title: 'Changes to These Terms',
     body:
-      'Neuroturing may revise these Terms & Conditions at any time. Updated versions will be posted on this page, and continued use of the website after such updates constitutes acceptance of the revised terms.',
-  },
-  {
-    title: 'Contact Information',
-    body:
-      'If you have questions regarding these Terms & Conditions, please contact Neuroturing through the contact page or by email at info@neuroturing.com.',
+      'Neuroturing reserves the right to modify these Terms & Conditions at any time. Updated versions will be published on this website with immediate effect.',
   },
 ];
 
@@ -92,12 +87,11 @@ const TermsAndConditions = () => {
             </h1>
 
             <p className="mx-auto max-w-3xl text-lg leading-8 text-gray-400">
-              These terms explain the rules, responsibilities, and limitations that apply when
-              visitors access and interact with the Neuroturing website.
+            Welcome to Neuroturing. By accessing or using this website, you agree to comply with these Terms & Conditions. If you do not agree, please discontinue use of the website.
             </p>
 
             <div className="mt-8 inline-flex rounded-full border border-white/10 bg-white/[0.03] px-5 py-2 text-sm text-gray-300">
-              Effective date: July 28, 2026
+              Effective date: July 29, 2026
             </div>
           </div>
 
@@ -111,6 +105,52 @@ const TermsAndConditions = () => {
                 points={section.points}
               />
             ))}
+          </div>
+          <div className="mt-12 rounded-3xl border border-white/10 bg-white/[0.03] p-8">
+            <h2 className="mb-4 text-2xl font-bold text-white">
+              Contact
+            </h2>
+
+            <p className="mb-6 leading-7 text-gray-400">
+              For any questions regarding these Terms & Conditions, please contact us:
+            </p>
+
+            <div className="space-y-4">
+              <div>
+                <p className="text-sm font-semibold uppercase tracking-wide text-cyan-400">
+                  Company
+                </p>
+                <p className="mt-1 text-gray-300">
+                  Neuroturing
+                </p>
+              </div>
+
+              <div>
+                <p className="text-sm font-semibold uppercase tracking-wide text-cyan-400">
+                  Email
+                </p>
+                <a
+                  href="mailto:info@neuroturing.com"
+                  className="mt-1 text-white transition-colors hover:text-cyan-400"
+                >
+                  info@neuroturing.com
+                </a>
+              </div>
+
+              <div>
+                <p className="text-sm font-semibold uppercase tracking-wide text-cyan-400">
+                  Website
+                </p>
+                <a
+                  href="https://neuroturing.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="mt-1 text-white transition-colors hover:text-cyan-400"
+                >
+                  www.neuroturing.com
+                </a>
+              </div>
+            </div>
           </div>
         </div>
       </section>

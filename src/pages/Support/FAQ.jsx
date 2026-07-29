@@ -5,34 +5,39 @@ import FAQAccordion from './components/FAQAccordion';
 
 const faqItems = [
   {
-    question: 'What does Neuroturing do?',
+    question: 'What is Neuroturing?',
     answer:
-      'Neuroturing provides an explainable intelligence layer for financial institutions. The platform helps organizations understand, monitor, and audit AI-driven decisions without replacing their existing models.',
+      'Neuroturing is an AI company building explainable AI (XAI) solutions for banks, payment aggregators, and fintechs - designed to make every automated decision transparent, auditable, and compliant with regulatory expectations.',
   },
   {
-    question: 'Who is Neuroturing built for?',
+    question: 'How is Neuroturing different from other AI platforms?',
     answer:
-      'Neuroturing is designed for banks, NBFCs, payment aggregators, fintech companies, and other financial institutions that need transparent and accountable AI systems.',
+      'A: Unlike generic AI or automation tools, Neuroturing is purpose-built for explainability -every module, from onboarding to transaction monitoring, generates a clear, human-readable rationale behind its decisions, not just an output.',
   },
   {
-    question: 'Do I need to retrain my existing AI models?',
+    question: 'What is the Neuroturing Connected Banking Platform?',
     answer:
-      'No. Neuroturing is positioned as a modular layer that works with your existing AI environment, helping teams explain and govern model decisions without retraining core models.',
+      "It's an AI-powered, unified platform that brings merchant onboarding, verification, approvals, settlements, and transaction management into one system -with explainable AI supporting every decision along the way.",
   },
   {
-    question: 'What problems can Neuroturing help solve?',
+    question: 'What does "explainable AI" mean on this platform, and how is risk monitored?',
     answer:
-      'The platform can help with explainability, auditability, model monitoring, governance readiness, customer-facing decision explanations, and improved internal visibility into AI-driven outcomes.',
+      'Every AI-driven decision comes with a clear, human-readable reason behind it - ClarityCore™ turns complex model outputs into plain-language explanations, while DriftSense™ continuously monitors model behavior and transaction patterns to catch drift or anomalies early.',
   },
   {
-    question: 'Can Neuroturing support compliance and governance needs?',
+    question: 'Can decisions be audited or traced back later?',
     answer:
-      'Yes. The platform is presented to support transparency, accountability, and traceability, which are important capabilities for AI governance and regulatory preparedness in financial services.',
+      'Yes. ProofChain™ maintains a secure, traceable record of every decision and its explanation, creating an audit-ready trail for regulators, auditors, and internal governance reviews.',
   },
   {
-    question: 'How can I get in touch with the team?',
+    question: 'How do customers or frontline agents get explanations for declined or flagged transactions?',
     answer:
-      'You can use the contact form on the website or reach out through the contact details listed on the Contact Us page to speak with the Neuroturing team.',
+      'ExplainTouch™ delivers real-time, plain-language explanations at the point of transaction - helping customers self-correct and agents resolve queries instantly, without escalation.',
+  },
+  {
+    question: ' Is there a single view to monitor everything, and is the platform built for regulatory compliance?',
+    answer:
+      'InsightHub™ consolidates insights, risk signals, and performance metrics from every module into one dashboard for stakeholders -and the entire platform is designed around RBI, DPDP, and FIU-IND expectations, with standardized governance and audit-ready reporting built in.',
   },
 ];
 
@@ -61,7 +66,7 @@ const FAQ = () => {
 
             <h1
               className="mb-5 bg-gradient-to-r from-white via-[#d8ecff] to-[#8ebeff] bg-clip-text text-5xl font-extrabold tracking-tight text-transparent sm:text-6xl lg:text-[3.5rem] lg:leading-none"
-              style={{ WebkitBackgroundClip: 'text' }}
+              style={{ lineHeight: 1.15 }}
             >
               Frequently Asked Questions
             </h1>

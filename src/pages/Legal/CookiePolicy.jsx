@@ -5,49 +5,44 @@ import LegalSection from './components/LegalSection';
 
 const sections = [
   {
-    title: 'What Are Cookies',
+    title: 'What Are Cookies?',
     body:
-      'Cookies are small text files stored on your device when you visit a website. They help websites remember information about your visit, support essential functionality, and improve the overall browsing experience.',
-  },
-  {
-    title: 'How Neuroturing Uses Cookies',
-    body:
-      'Neuroturing may use cookies and similar technologies to keep the website functioning properly, understand visitor interactions, measure performance, and improve usability over time.',
-    points: [
-      'Support essential website behavior and basic navigation.',
-      'Remember user preferences where applicable.',
-      'Analyze aggregate traffic and engagement patterns.',
-    ],
+      'Cookies are small text files stored on your device when you visit a website.',
   },
   {
     title: 'Types of Cookies We May Use',
+    points: ['Essential Cookies','Performance & Analytics Cookies','Functional Cookies','Marketing Cookies','Managing Cookies']
+  },
+  
+  {
+    title: 'Essential Cookies',
     body:
-      'Depending on the website setup and connected tools, Neuroturing may use essential cookies, analytics cookies, functionality cookies, and limited performance-related technologies that help us understand how the site is being accessed and used.',
+      'Required for website functionality, navigation, and security.',
   },
   {
-    title: 'Third-Party Cookies',
+    title: 'Performance & Analytics Cookies',
     body:
-      'Some cookies may be set by third-party services integrated into the website, such as analytics, embedded content, or communication tools. These third parties may process data according to their own privacy and cookie policies.',
+      'Help us understand website traffic, visitor behaviour, and platform performance.',
   },
   {
-    title: 'Managing Cookie Preferences',
+    title: 'Functional Cookies',
     body:
-      'Most web browsers allow users to control cookies through browser settings. You may choose to block, delete, or limit cookies at any time, although doing so may affect the functionality or performance of certain parts of the website.',
+      'Remember your preferences and improve user experience.',
   },
   {
-    title: 'Cookie Retention',
+    title: 'Marketing Cookies',
     body:
-      'Cookies may remain on your device for different periods depending on their purpose. Some expire when you close your browser, while others may persist for a longer period until they expire or are manually removed.',
+      'May be used for future marketing initiatives, only where legally permitted.',
   },
   {
-    title: 'Changes to This Cookie Policy',
+    title: 'Managing Cookies',
     body:
-      'Neuroturing may update this Cookie Policy from time to time to reflect changes in legal requirements, website functionality, or service providers. The latest version will always be posted on this page.',
+      'You can modify your browser settings to refuse or delete cookies. Some website features may not function properly if cookies are disabled.',
   },
   {
-    title: 'Contact Information',
+    title: 'Third-Party Services',
     body:
-      'If you have questions about our use of cookies or tracking technologies, please contact Neuroturing through the contact page or by email at info@neuroturing.com.',
+      'We may use trusted analytics or cloud service providers that place cookies to support website performance and measurement.By continuing to use this website, you consent to our use of cookies in accordance with this Cookie Policy.',
   },
 ];
 
@@ -82,12 +77,11 @@ const CookiePolicy = () => {
             </h1>
 
             <p className="mx-auto max-w-3xl text-lg leading-8 text-gray-400">
-              This policy outlines how cookies and similar technologies may be used on the
-              Neuroturing website and the choices available to visitors.
+               Neuroturing uses cookies and similar technologies to improve website functionality, analyse website performance, and enhance your browsing experience.
             </p>
 
             <div className="mt-8 inline-flex rounded-full border border-white/10 bg-white/[0.03] px-5 py-2 text-sm text-gray-300">
-              Effective date: July 28, 2026
+              Effective date: July 29, 2026
             </div>
           </div>
 

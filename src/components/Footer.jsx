@@ -193,9 +193,8 @@ const Footer = () => {
           </div>
 
           <div className="flex items-center gap-6 order-2 md:order-none">
-            <a href="/privacy-policy" className="text-white/40 hover:text-white text-xs transition-colors">Privacy</a>
-            <a href="/terms-and-conditions)" className="text-white/40 hover:text-white text-xs transition-colors">Terms</a>
-            <a href="/cookie-policy" className="text-white/40 hover:text-white text-xs transition-colors">Cookies</a>
+            <a href="/disclaimer" className="text-white/40 hover:text-white text-xs transition-colors">Disclaimer</a>
+            <a href="/ai-statement" className="text-white/40 hover:text-white text-xs transition-colors">AI Statement</a>
           </div>
         </div>
       </div>

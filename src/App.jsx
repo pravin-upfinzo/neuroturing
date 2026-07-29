@@ -13,6 +13,8 @@ import PrivacyPolicy from "./pages/Legal/PrivacyPolicy";
 import CookiePolicy from "./pages/Legal/CookiePolicy";
 import FAQ from "./pages/Support/FAQ";
 import ConnectedBankingPlatform from "./pages/Product/ConnectedBankingPlatform";
+import Disclaimer from "./pages/Legal/Disclaimer";
+import AIStatement from "./pages/Legal/AIStatement";
 
 function App() {
   return (
@@ -35,6 +37,8 @@ function App() {
         <Route path="/terms-and-conditions" element={<TermsAndConditions />} />
         <Route path="/privacy-policy" element={<PrivacyPolicy />} />
         <Route path="/cookie-policy" element={<CookiePolicy />} />
+        <Route path="/disclaimer" element={<Disclaimer />} />
+        <Route path="/ai-statement" element={<AIStatement />} />
       </Routes>
     </div>
   );
